@@ -1,0 +1,36 @@
+facility: Цех механического обезвоживания осадка (ЦМОО)
+inference:
+  confidence_threshold: 0.4
+  iou_threshold: 0.45
+  model_tag: construction-ppe-960
+  person_min_height_px: 60
+rules:
+  danger_zone:
+    cooldown_seconds: 60
+    description: Фиксация нахождения персонала в зоне шнеков/сепараторов дольше допустимого
+    name: Нахождение в опасной зоне механизмов
+    severity: CRITICAL
+    sound_alarm: true
+    time_threshold_seconds: 5.0
+  no_hardhat:
+    cooldown_seconds: 60
+    description: Сглаженное отсутствие СИЗ головы при устойчивом треке человека
+    name: Отсутствие защитной каски
+    severity: WARNING
+    sound_alarm: false
+    time_threshold_seconds: 3.0
+  safety_vest:
+    cooldown_seconds: 60
+    description: Контроль ношения светоотражающего жилета в транспортных проездах
+    name: Отсутствие сигнального жилета
+    severity: WARNING
+    sound_alarm: false
+    time_threshold_seconds: 4.0
+  smoking:
+    cooldown_seconds: 120
+    description: Детекция жеста рука-рот в производственной зоне
+    name: Контроль курения в неположенном месте
+    severity: CRITICAL
+    sound_alarm: true
+    time_threshold_seconds: 2.5
+version: 1.2.0

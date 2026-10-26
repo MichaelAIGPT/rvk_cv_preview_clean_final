@@ -1,0 +1,83 @@
+[
+  {
+    "model_name": "MobileNetV3-Small",
+    "weights_path": "D:\\Projects\\Vodokanal_CV\\cv_core\\weights\\mobilenetv3_small_best.pth",
+    "params_millions": 1.93,
+    "weights_size_mb": 7.63,
+    "accuracy": 96.4,
+    "precision": 100.0,
+    "recall": 54.5,
+    "f1_score": 0.853,
+    "hardhat_f1": 0.706,
+    "vest_f1": 1.0,
+    "gpu_latency_ms": 9.8,
+    "cpu_latency_ms": 8.19,
+    "confusion_matrix": {
+      "tp": 6,
+      "fp": 0,
+      "fn": 5,
+      "tn": 127
+    },
+    "vest_confusion_matrix": {
+      "tp": 46,
+      "fp": 0,
+      "fn": 0,
+      "tn": 92
+    },
+    "training_time_sec": 19.9
+  },
+  {
+    "model_name": "EfficientNet-B0",
+    "weights_path": "D:\\Projects\\Vodokanal_CV\\cv_core\\weights\\efficientnet_b0_best.pth",
+    "params_millions": 8.18,
+    "weights_size_mb": 31.8,
+    "accuracy": 97.1,
+    "precision": 88.9,
+    "recall": 72.7,
+    "f1_score": 0.9,
+    "hardhat_f1": 0.8,
+    "vest_f1": 1.0,
+    "gpu_latency_ms": 15.09,
+    "cpu_latency_ms": 20.5,
+    "confusion_matrix": {
+      "tp": 8,
+      "fp": 1,
+      "fn": 3,
+      "tn": 126
+    },
+    "vest_confusion_matrix": {
+      "tp": 46,
+      "fp": 0,
+      "fn": 0,
+      "tn": 92
+    },
+    "training_time_sec": 22.6
+  },
+  {
+    "model_name": "ResNet-18",
+    "weights_path": "D:\\Projects\\Vodokanal_CV\\cv_core\\weights\\resnet_18_best.pth",
+    "params_millions": 22.42,
+    "weights_size_mb": 85.68,
+    "accuracy": 97.1,
+    "precision": 100.0,
+    "recall": 63.6,
+    "f1_score": 0.889,
+    "hardhat_f1": 0.778,
+    "vest_f1": 1.0,
+    "gpu_latency_ms": 4.75,
+    "cpu_latency_ms": 16.14,
+    "confusion_matrix": {
+      "tp": 7,
+      "fp": 0,
+      "fn": 4,
+      "tn": 127
+    },
+    "vest_confusion_matrix": {
+      "tp": 46,
+      "fp": 0,
+      "fn": 0,
+      "tn": 92
+    },
+    "training_time_sec": 14.9
+  }
+]

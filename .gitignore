@@ -1,0 +1,41 @@
+# Python & Environment
+__pycache__/
+*.py[cod]
+*.class
+*.so
+.venv/
+env/
+venv/
+ENV/
+
+# System logs & local caches
+backend/logs/*.log
+logs/*.log
+*.tmp
+debug_*.*
+**/debug_*.*
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Active training runs & large checkpoints
+backend/data/training_runs/active_run_*
+runs/
+*.tar.xz
+*.zip
+
+# Datasets, crops, media & sample frames (STRICTLY PROHIBITED ON GIT)
+dataset/clean/
+dataset/crops/
+dataset/head_crops/
+dataset/yolo_dataset/
+dataset/test_playlists/
+dataset/previews/
+backend/data/active_learning_store/
+backend/data/camera_previews/
+*.mp4
+*.avi
+*.mkv
+*.mov
+*.jpg
+*.jpeg

@@ -1,0 +1,1346 @@
+[
+  {
+    "id": "inc-80816937",
+    "status": "new",
+    "notes": null,
+    "timestamp": 1792905465.0146976,
+    "time_str": "07:17:45",
+    "frame_idx": 241,
+    "track_id": 359,
+    "violations": [
+      "NO_HARDHAT"
+    ],
+    "bbox": [
+      856,
+      594,
+      992,
+      882
+    ],
+    "playlist": "golden",
+    "camera_title": "ЦМОО • Шнековые сепараторы (Golden)",
+    "model_version": "v2_cascade"
+  },
+  {
+    "id": "inc-e5af290e",
+    "status": "new",
+    "notes": null,
+    "timestamp": 1792905464.516306,
+    "time_str": "07:17:44",
+    "frame_idx": 240,
+    "track_id": 358,
+    "violations": [
+      "NO_HARDHAT"
+    ],
+    "bbox": [
+      520,
+      261,
+      601,
+      478
+    ],
+    "playlist": "golden",
+    "camera_title": "ЦМОО • Шнековые сепараторы (Golden)",
+    "model_version": "v2_cascade"
+  },
+  {
+    "id": "inc-f6517f1d",
+    "status": "new",
+    "notes": null,
+    "timestamp": 1792905463.515708,
+    "time_str": "07:17:43",
+    "frame_idx": 238,
+    "track_id": 357,
+    "violations": [
+      "NO_HARDHAT"
+    ],
+    "bbox": [
+      677,
+      794,
+      842,
+      1080
+    ],
+    "playlist": "golden",
+    "camera_title": "ЦМОО • Шнековые сепараторы (Golden)",
+    "model_version": "v2_cascade"
+  },
+  {
+    "id": "inc-22892f73",
+    "status": "new",
+    "notes": null,
+    "timestamp": 1792905462.5156467,
+    "time_str": "07:17:42",
+    "frame_idx": 236,
+    "track_id": 355,
+    "violations": [
+      "NO_HARDHAT"
+    ],
+    "bbox": [
+      603,
+      551,
+      714,
+      822
+    ],
+    "playlist": "golden",
+    "camera_title": "ЦМОО • Шнековые сепараторы (Golden)",
+    "model_version": "v2_cascade"
+  },
+  {
+    "id": "inc-3e3dfbee",
+    "status": "new",
+    "notes": null,
+    "timestamp": 1792905461.0134797,
+    "time_str": "07:17:41",
+    "frame_idx": 233,
+    "track_id": 353,
+    "violations": [
+      "NO_HARDHAT"
+    ],
+    "bbox": [
+      1392,
+      293,
+      1483,
+      520
+    ],
+    "playlist": "golden",
+    "camera_title": "ЦМОО • Шнековые сепараторы (Golden)",
+    "model_version": "v2_cascade"
+  },
+  {
+    "id": "inc-dcfb64bd",
+    "status": "new",
+    "notes": null,
+    "timestamp": 1792905458.5132835,
+    "time_str": "07:17:38",
+    "frame_idx": 228,
+    "track_id": 350,
+    "violations": [
+      "NO_HARDHAT"
+    ],
+    "bbox": [
+      1290,
+      375,
+      1408,
+      655
+    ],
+    "playlist": "golden",
+    "camera_title": "ЦМОО • Шнековые сепараторы (Golden)",
+    "model_version": "v2_cascade"
+  },
+  {
+    "id": "inc-a57bef38",
+    "status": "new",
+    "notes": null,
+    "timestamp": 1792905453.5042152,
+    "time_str": "07:17:33",
+    "frame_idx": 218,
+    "track_id": 343,
+    "violations": [
+      "NO_HARDHAT"
+    ],
+    "bbox": [
+      508,
+      588,
+      625,
+      748
+    ],
+    "playlist": "golden",
+    "camera_title": "ЦМОО • Шнековые сепараторы (Golden)",
+    "model_version": "v2_cascade"
+  },
+  {
+    "id": "inc-f5ee3b24",
+    "status": "new",
+    "notes": null,
+    "timestamp": 1792905453.005408,
+    "time_str": "07:17:33",
+    "frame_idx": 217,
+    "track_id": 342,
+    "violations": [
+      "NO_HARDHAT"
+    ],
+    "bbox": [
+      1167,
+      644,
+      1325,
+      986
+    ],
+    "playlist": "golden",
+    "camera_title": "ЦМОО • Шнековые сепараторы (Golden)",
+    "model_version": "v2_cascade"
+  },
+  {
+    "id": "inc-cf16ddd4",
+    "status": "new",
+    "notes": null,
+    "timestamp": 1792905448.9972527,
+    "time_str": "07:17:28",
+    "frame_idx": 209,
+    "track_id": 332,
+    "violations": [
+      "NO_HARDHAT"
+    ],
+    "bbox": [
+      461,
+      295,
+      548,
+      453
+    ],
+    "playlist": "golden",
+    "camera_title": "ЦМОО • Шнековые сепараторы (Golden)",
+    "model_version": "v2_cascade"
+  },
+  {
+    "id": "inc-2118020a",
+    "status": "new",
+    "notes": null,
+    "timestamp": 1792905448.5055842,
+    "time_str": "07:17:28",
+    "frame_idx": 208,
+    "track_id": 290,
+    "violations": [
+      "NO_HARDHAT"
+    ],
+    "bbox": [
+      1082,
+      835,
+      1241,
+      1078
+    ],
+    "playlist": "golden",
+    "camera_title": "ЦМОО • Шнековые сепараторы (Golden)",
+    "model_version": "v2_cascade"
+  },
+  {
+    "id": "inc-e1ef9386",
+    "status": "new",
+    "notes": null,
+    "timestamp": 1792905446.9679396,
+    "time_str": "07:17:26",
+    "frame_idx": 205,
+    "track_id": 340,
+    "violations": [
+      "NO_HARDHAT"
+    ],
+    "bbox": [
+      1082,
+      118,
+      1142,
+      306
+    ],
+    "playlist": "golden",
+    "camera_title": "ЦМОО • Шнековые сепараторы (Golden)",
+    "model_version": "v2_cascade"
+  },
+  {
+    "id": "inc-ce683e41",
+    "status": "new",
+    "notes": null,
+    "timestamp": 1792905445.4677725,
+    "time_str": "07:17:25",
+    "frame_idx": 202,
+    "track_id": 334,
+    "violations": [
+      "NO_HARDHAT"
+    ],
+    "bbox": [
+      1339,
+      569,
+      1447,
+      886
+    ],
+    "playlist": "golden",
+    "camera_title": "ЦМОО • Шнековые сепараторы (Golden)",
+    "model_version": "v2_cascade"
+  },
+  {
+    "id": "inc-580ae439",
+    "status": "new",
+    "notes": null,
+    "timestamp": 1792905444.9660735,
+    "time_str": "07:17:24",
+    "frame_idx": 201,
+    "track_id": 333,
+    "violations": [
+      "NO_HARDHAT"
+    ],
+    "bbox": [
+      1401,
+      834,
+      1536,
+      982
+    ],
+    "playlist": "golden",
+    "camera_title": "ЦМОО • Шнековые сепараторы (Golden)",
+    "model_version": "v2_cascade"
+  },
+  {
+    "id": "inc-491a1e35",
+    "status": "new",
+    "notes": null,
+    "timestamp": 1792905440.4581017,
+    "time_str": "07:17:20",
+    "frame_idx": 192,
+    "track_id": 330,
+    "violations": [
+      "NO_HARDHAT"
+    ],
+    "bbox": [
+      1581,
+      324,
+      1643,
+      565
+    ],
+    "playlist": "golden",
+    "camera_title": "ЦМОО • Шнековые сепараторы (Golden)",
+    "model_version": "v2_cascade"
+  },
+  {
+    "id": "inc-e0b25485",
+    "status": "new",
+    "notes": null,
+    "timestamp": 1792905438.9587805,
+    "time_str": "07:17:18",
+    "frame_idx": 189,
+    "track_id": 324,
+    "violations": [
+      "NO_HARDHAT"
+    ],
+    "bbox": [
+      46,
+      712,
+      181,
+      943
+    ],
+    "playlist": "golden",
+    "camera_title": "ЦМОО • Шнековые сепараторы (Golden)",
+    "model_version": "v2_cascade"
+  },
+  {
+    "id": "inc-830b2c8e",
+    "status": "new",
+    "notes": null,
+    "timestamp": 1792905436.9501936,
+    "time_str": "07:17:16",
+    "frame_idx": 185,
+    "track_id": 297,
+    "violations": [
+      "NO_HARDHAT"
+    ],
+    "bbox": [
+      1383,
+      418,
+      1501,
+      730
+    ],
+    "playlist": "golden",
+    "camera_title": "ЦМОО • Шнековые сепараторы (Golden)",
+    "model_version": "v2_cascade"
+  },
+  {
+    "id": "inc-69dc7fd1",
+    "status": "new",
+    "notes": null,
+    "timestamp": 1792905435.4541008,
+    "time_str": "07:17:15",
+    "frame_idx": 182,
+    "track_id": 315,
+    "violations": [
+      "NO_HARDHAT"
+    ],
+    "bbox": [
+      449,
+      379,
+      526,
+      582
+    ],
+    "playlist": "golden",
+    "camera_title": "ЦМОО • Шнековые сепараторы (Golden)",
+    "model_version": "v2_cascade"
+  },
+  {
+    "id": "inc-70192bdd",
+    "status": "new",
+    "notes": null,
+    "timestamp": 1792905433.9516451,
+    "time_str": "07:17:13",
+    "frame_idx": 179,
+    "track_id": 313,
+    "violations": [
+      "NO_HARDHAT"
+    ],
+    "bbox": [
+      306,
+      820,
+      470,
+      1079
+    ],
+    "playlist": "golden",
+    "camera_title": "ЦМОО • Шнековые сепараторы (Golden)",
+    "model_version": "v2_cascade"
+  },
+  {
+    "id": "inc-cc0d0bcb",
+    "status": "new",
+    "notes": null,
+    "timestamp": 1792905431.942285,
+    "time_str": "07:17:11",
+    "frame_idx": 175,
+    "track_id": 306,
+    "violations": [
+      "NO_HARDHAT"
+    ],
+    "bbox": [
+      862,
+      264,
+      902,
+      398
+    ],
+    "playlist": "golden",
+    "camera_title": "ЦМОО • Шнековые сепараторы (Golden)",
+    "model_version": "v2_cascade"
+  },
+  {
+    "id": "inc-09e88302",
+    "status": "new",
+    "notes": null,
+    "timestamp": 1792905428.9424133,
+    "time_str": "07:17:08",
+    "frame_idx": 169,
+    "track_id": 309,
+    "violations": [
+      "NO_HARDHAT"
+    ],
+    "bbox": [
+      1319,
+      450,
+      1388,
+      650
+    ],
+    "playlist": "golden",
+    "camera_title": "ЦМОО • Шнековые сепараторы (Golden)",
+    "model_version": "v2_cascade"
+  },
+  {
+    "id": "inc-e08e9da5",
+    "status": "new",
+    "notes": null,
+    "timestamp": 1792905426.9369922,
+    "time_str": "07:17:06",
+    "frame_idx": 165,
+    "track_id": 303,
+    "violations": [
+      "NO_HARDHAT"
+    ],
+    "bbox": [
+      1345,
+      764,
+      1451,
+      978
+    ],
+    "playlist": "golden",
+    "camera_title": "ЦМОО • Шнековые сепараторы (Golden)",
+    "model_version": "v2_cascade"
+  },
+  {
+    "id": "inc-28509024",
+    "status": "new",
+    "notes": null,
+    "timestamp": 1792905426.4370286,
+    "time_str": "07:17:06",
+    "frame_idx": 164,
+    "track_id": 304,
+    "violations": [
+      "NO_HARDHAT"
+    ],
+    "bbox": [
+      167,
+      441,
+      423,
+      861
+    ],
+    "playlist": "golden",
+    "camera_title": "ЦМОО • Шнековые сепараторы (Golden)",
+    "model_version": "v2_cascade"
+  },
+  {
+    "id": "inc-d1f8694e",
+    "status": "new",
+    "notes": null,
+    "timestamp": 1792905424.4369292,
+    "time_str": "07:17:04",
+    "frame_idx": 160,
+    "track_id": 290,
+    "violations": [
+      "NO_HARDHAT"
+    ],
+    "bbox": [
+      1177,
+      655,
+      1289,
+      937
+    ],
+    "playlist": "golden",
+    "camera_title": "ЦМОО • Шнековые сепараторы (Golden)",
+    "model_version": "v2_cascade"
+  },
+  {
+    "id": "inc-24c54400",
+    "status": "new",
+    "notes": null,
+    "timestamp": 1792905422.429405,
+    "time_str": "07:17:02",
+    "frame_idx": 156,
+    "track_id": 298,
+    "violations": [
+      "NO_HARDHAT"
+    ],
+    "bbox": [
+      741,
+      654,
+      877,
+      985
+    ],
+    "playlist": "golden",
+    "camera_title": "ЦМОО • Шнековые сепараторы (Golden)",
+    "model_version": "v2_cascade"
+  },
+  {
+    "id": "inc-3c045d42",
+    "status": "new",
+    "notes": null,
+    "timestamp": 1792905421.9301622,
+    "time_str": "07:17:01",
+    "frame_idx": 155,
+    "track_id": 297,
+    "violations": [
+      "NO_HARDHAT"
+    ],
+    "bbox": [
+      1365,
+      455,
+      1473,
+      718
+    ],
+    "playlist": "golden",
+    "camera_title": "ЦМОО • Шнековые сепараторы (Golden)",
+    "model_version": "v2_cascade"
+  },
+  {
+    "id": "inc-5ffae92c",
+    "status": "new",
+    "notes": null,
+    "timestamp": 1792905421.422202,
+    "time_str": "07:17:01",
+    "frame_idx": 154,
+    "track_id": 299,
+    "violations": [
+      "NO_HARDHAT"
+    ],
+    "bbox": [
+      677,
+      258,
+      764,
+      503
+    ],
+    "playlist": "golden",
+    "camera_title": "ЦМОО • Шнековые сепараторы (Golden)",
+    "model_version": "v2_cascade"
+  },
+  {
+    "id": "inc-8df8fe9e",
+    "status": "new",
+    "notes": null,
+    "timestamp": 1792905419.9286063,
+    "time_str": "07:16:59",
+    "frame_idx": 151,
+    "track_id": 300,
+    "violations": [
+      "NO_HARDHAT"
+    ],
+    "bbox": [
+      994,
+      887,
+      1152,
+      1080
+    ],
+    "playlist": "golden",
+    "camera_title": "ЦМОО • Шнековые сепараторы (Golden)",
+    "model_version": "v2_cascade"
+  },
+  {
+    "id": "inc-aa7711a3",
+    "status": "new",
+    "notes": null,
+    "timestamp": 1792905419.4261284,
+    "time_str": "07:16:59",
+    "frame_idx": 150,
+    "track_id": 301,
+    "violations": [
+      "NO_HARDHAT"
+    ],
+    "bbox": [
+      482,
+      304,
+      600,
+      498
+    ],
+    "playlist": "golden",
+    "camera_title": "ЦМОО • Шнековые сепараторы (Golden)",
+    "model_version": "v2_cascade"
+  },
+  {
+    "id": "inc-8276e284",
+    "status": "new",
+    "notes": null,
+    "timestamp": 1792905413.9059072,
+    "time_str": "07:16:53",
+    "frame_idx": 139,
+    "track_id": 296,
+    "violations": [
+      "NO_HARDHAT"
+    ],
+    "bbox": [
+      1315,
+      737,
+      1415,
+      986
+    ],
+    "playlist": "golden",
+    "camera_title": "ЦМОО • Шнековые сепараторы (Golden)",
+    "model_version": "v2_cascade"
+  },
+  {
+    "id": "inc-8e290bef",
+    "status": "new",
+    "notes": null,
+    "timestamp": 1792905410.8983693,
+    "time_str": "07:16:50",
+    "frame_idx": 133,
+    "track_id": 288,
+    "violations": [
+      "NO_HARDHAT"
+    ],
+    "bbox": [
+      1520,
+      399,
+      1635,
+      666
+    ],
+    "playlist": "golden",
+    "camera_title": "ЦМОО • Шнековые сепараторы (Golden)",
+    "model_version": "v2_cascade"
+  },
+  {
+    "id": "inc-a3e267a0",
+    "status": "new",
+    "notes": null,
+    "timestamp": 1792905408.395641,
+    "time_str": "07:16:48",
+    "frame_idx": 128,
+    "track_id": 276,
+    "violations": [
+      "NO_HARDHAT"
+    ],
+    "bbox": [
+      1120,
+      302,
+      1213,
+      388
+    ],
+    "playlist": "golden",
+    "camera_title": "ЦМОО • Шнековые сепараторы (Golden)",
+    "model_version": "v2_cascade"
+  },
+  {
+    "id": "inc-2805ff3d",
+    "status": "new",
+    "notes": null,
+    "timestamp": 1792905407.8951917,
+    "time_str": "07:16:47",
+    "frame_idx": 127,
+    "track_id": 280,
+    "violations": [
+      "NO_HARDHAT"
+    ],
+    "bbox": [
+      299,
+      810,
+      485,
+      1080
+    ],
+    "playlist": "golden",
+    "camera_title": "ЦМОО • Шнековые сепараторы (Golden)",
+    "model_version": "v2_cascade"
+  },
+  {
+    "id": "inc-4a4b5a0e",
+    "status": "new",
+    "notes": null,
+    "timestamp": 1792905404.3844776,
+    "time_str": "07:16:44",
+    "frame_idx": 120,
+    "track_id": 277,
+    "violations": [
+      "NO_HARDHAT"
+    ],
+    "bbox": [
+      1212,
+      697,
+      1347,
+      1047
+    ],
+    "playlist": "golden",
+    "camera_title": "ЦМОО • Шнековые сепараторы (Golden)",
+    "model_version": "v2_cascade"
+  },
+  {
+    "id": "inc-213bac9a",
+    "status": "new",
+    "notes": null,
+    "timestamp": 1792905403.8878887,
+    "time_str": "07:16:43",
+    "frame_idx": 119,
+    "track_id": 272,
+    "violations": [
+      "NO_HARDHAT"
+    ],
+    "bbox": [
+      1110,
+      834,
+      1282,
+      1080
+    ],
+    "playlist": "golden",
+    "camera_title": "ЦМОО • Шнековые сепараторы (Golden)",
+    "model_version": "v2_cascade"
+  },
+  {
+    "id": "inc-35c11e41",
+    "status": "new",
+    "notes": null,
+    "timestamp": 1792905399.3803222,
+    "time_str": "07:16:39",
+    "frame_idx": 110,
+    "track_id": 270,
+    "violations": [
+      "NO_HARDHAT"
+    ],
+    "bbox": [
+      1352,
+      707,
+      1448,
+      962
+    ],
+    "playlist": "golden",
+    "camera_title": "ЦМОО • Шнековые сепараторы (Golden)",
+    "model_version": "v2_cascade"
+  },
+  {
+    "id": "inc-4c05aa55",
+    "status": "new",
+    "notes": null,
+    "timestamp": 1792905397.3722312,
+    "time_str": "07:16:37",
+    "frame_idx": 106,
+    "track_id": 267,
+    "violations": [
+      "NO_HARDHAT"
+    ],
+    "bbox": [
+      736,
+      319,
+      862,
+      584
+    ],
+    "playlist": "golden",
+    "camera_title": "ЦМОО • Шнековые сепараторы (Golden)",
+    "model_version": "v2_cascade"
+  },
+  {
+    "id": "inc-7c40d71c",
+    "status": "new",
+    "notes": null,
+    "timestamp": 1792905392.864176,
+    "time_str": "07:16:32",
+    "frame_idx": 97,
+    "track_id": 264,
+    "violations": [
+      "NO_HARDHAT"
+    ],
+    "bbox": [
+      1149,
+      346,
+      1249,
+      610
+    ],
+    "playlist": "golden",
+    "camera_title": "ЦМОО • Шнековые сепараторы (Golden)",
+    "model_version": "v2_cascade"
+  },
+  {
+    "id": "inc-b313514e",
+    "status": "new",
+    "notes": null,
+    "timestamp": 1792905392.3640778,
+    "time_str": "07:16:32",
+    "frame_idx": 96,
+    "track_id": 251,
+    "violations": [
+      "NO_HARDHAT"
+    ],
+    "bbox": [
+      991,
+      481,
+      1090,
+      762
+    ],
+    "playlist": "golden",
+    "camera_title": "ЦМОО • Шнековые сепараторы (Golden)",
+    "model_version": "v2_cascade"
+  },
+  {
+    "id": "inc-2efb1138",
+    "status": "new",
+    "notes": null,
+    "timestamp": 1792905391.864274,
+    "time_str": "07:16:31",
+    "frame_idx": 95,
+    "track_id": 261,
+    "violations": [
+      "NO_HARDHAT"
+    ],
+    "bbox": [
+      1262,
+      321,
+      1319,
+      461
+    ],
+    "playlist": "golden",
+    "camera_title": "ЦМОО • Шнековые сепараторы (Golden)",
+    "model_version": "v2_cascade"
+  },
+  {
+    "id": "inc-289af326",
+    "status": "new",
+    "notes": null,
+    "timestamp": 1792905389.864528,
+    "time_str": "07:16:29",
+    "frame_idx": 91,
+    "track_id": 259,
+    "violations": [
+      "NO_HARDHAT"
+    ],
+    "bbox": [
+      516,
+      291,
+      562,
+      440
+    ],
+    "playlist": "golden",
+    "camera_title": "ЦМОО • Шнековые сепараторы (Golden)",
+    "model_version": "v2_cascade"
+  },
+  {
+    "id": "inc-a7705a5b",
+    "status": "new",
+    "notes": null,
+    "timestamp": 1792905389.864528,
+    "time_str": "07:16:29",
+    "frame_idx": 91,
+    "track_id": 257,
+    "violations": [
+      "NO_HARDHAT"
+    ],
+    "bbox": [
+      1077,
+      817,
+      1267,
+      1078
+    ],
+    "playlist": "golden",
+    "camera_title": "ЦМОО • Шнековые сепараторы (Golden)",
+    "model_version": "v2_cascade"
+  },
+  {
+    "id": "inc-3db586ac",
+    "status": "new",
+    "notes": null,
+    "timestamp": 1792905388.8615215,
+    "time_str": "07:16:28",
+    "frame_idx": 89,
+    "track_id": 258,
+    "violations": [
+      "NO_HARDHAT"
+    ],
+    "bbox": [
+      459,
+      221,
+      515,
+      449
+    ],
+    "playlist": "golden",
+    "camera_title": "ЦМОО • Шнековые сепараторы (Golden)",
+    "model_version": "v2_cascade"
+  },
+  {
+    "id": "inc-83d4b5e1",
+    "status": "new",
+    "notes": null,
+    "timestamp": 1792905381.3353364,
+    "time_str": "07:16:21",
+    "frame_idx": 74,
+    "track_id": 245,
+    "violations": [
+      "NO_HARDHAT"
+    ],
+    "bbox": [
+      1159,
+      728,
+      1328,
+      1080
+    ],
+    "playlist": "golden",
+    "camera_title": "ЦМОО • Шнековые сепараторы (Golden)",
+    "model_version": "v2_cascade"
+  },
+  {
+    "id": "inc-338c9961",
+    "status": "new",
+    "notes": null,
+    "timestamp": 1792905380.3350472,
+    "time_str": "07:16:20",
+    "frame_idx": 72,
+    "track_id": 247,
+    "violations": [
+      "NO_HARDHAT"
+    ],
+    "bbox": [
+      1356,
+      571,
+      1428,
+      807
+    ],
+    "playlist": "golden",
+    "camera_title": "ЦМОО • Шнековые сепараторы (Golden)",
+    "model_version": "v2_cascade"
+  },
+  {
+    "id": "inc-beeec64c",
+    "status": "new",
+    "notes": null,
+    "timestamp": 1792905378.834053,
+    "time_str": "07:16:18",
+    "frame_idx": 69,
+    "track_id": 244,
+    "violations": [
+      "NO_HARDHAT"
+    ],
+    "bbox": [
+      1418,
+      672,
+      1492,
+      898
+    ],
+    "playlist": "golden",
+    "camera_title": "ЦМОО • Шнековые сепараторы (Golden)",
+    "model_version": "v2_cascade"
+  },
+  {
+    "id": "inc-804e69ff",
+    "status": "new",
+    "notes": null,
+    "timestamp": 1792905376.8249083,
+    "time_str": "07:16:16",
+    "frame_idx": 65,
+    "track_id": 241,
+    "violations": [
+      "NO_HARDHAT"
+    ],
+    "bbox": [
+      1263,
+      454,
+      1407,
+      803
+    ],
+    "playlist": "golden",
+    "camera_title": "ЦМОО • Шнековые сепараторы (Golden)",
+    "model_version": "v2_cascade"
+  },
+  {
+    "id": "inc-665470b9",
+    "status": "new",
+    "notes": null,
+    "timestamp": 1792905376.326834,
+    "time_str": "07:16:16",
+    "frame_idx": 64,
+    "track_id": 243,
+    "violations": [
+      "NO_HARDHAT"
+    ],
+    "bbox": [
+      1094,
+      344,
+      1201,
+      617
+    ],
+    "playlist": "golden",
+    "camera_title": "ЦМОО • Шнековые сепараторы (Golden)",
+    "model_version": "v2_cascade"
+  },
+  {
+    "id": "inc-df361c77",
+    "status": "new",
+    "notes": null,
+    "timestamp": 1792905374.8259773,
+    "time_str": "07:16:14",
+    "frame_idx": 61,
+    "track_id": 229,
+    "violations": [
+      "NO_HARDHAT"
+    ],
+    "bbox": [
+      1316,
+      409,
+      1372,
+      574
+    ],
+    "playlist": "golden",
+    "camera_title": "ЦМОО • Шнековые сепараторы (Golden)",
+    "model_version": "v2_cascade"
+  },
+  {
+    "id": "inc-d0f39a4d",
+    "status": "new",
+    "notes": null,
+    "timestamp": 1792905373.3180552,
+    "time_str": "07:16:13",
+    "frame_idx": 58,
+    "track_id": 230,
+    "violations": [
+      "NO_HARDHAT"
+    ],
+    "bbox": [
+      192,
+      519,
+      447,
+      1022
+    ],
+    "playlist": "golden",
+    "camera_title": "ЦМОО • Шнековые сепараторы (Golden)",
+    "model_version": "v2_cascade"
+  },
+  {
+    "id": "inc-c56c198d",
+    "status": "new",
+    "notes": null,
+    "timestamp": 1792905372.315944,
+    "time_str": "07:16:12",
+    "frame_idx": 56,
+    "track_id": 237,
+    "violations": [
+      "NO_HARDHAT"
+    ],
+    "bbox": [
+      1108,
+      907,
+      1291,
+      1080
+    ],
+    "playlist": "golden",
+    "camera_title": "ЦМОО • Шнековые сепараторы (Golden)",
+    "model_version": "v2_cascade"
+  },
+  {
+    "id": "inc-81ac3ecc",
+    "status": "new",
+    "notes": null,
+    "timestamp": 1792905372.315944,
+    "time_str": "07:16:12",
+    "frame_idx": 56,
+    "track_id": 227,
+    "violations": [
+      "NO_HARDHAT"
+    ],
+    "bbox": [
+      1034,
+      637,
+      1250,
+      922
+    ],
+    "playlist": "golden",
+    "camera_title": "ЦМОО • Шнековые сепараторы (Golden)",
+    "model_version": "v2_cascade"
+  },
+  {
+    "id": "inc-754ffd3c",
+    "status": "new",
+    "notes": null,
+    "timestamp": 1792905371.3213425,
+    "time_str": "07:16:11",
+    "frame_idx": 54,
+    "track_id": 235,
+    "violations": [
+      "NO_HARDHAT"
+    ],
+    "bbox": [
+      1263,
+      319,
+      1326,
+      403
+    ],
+    "playlist": "golden",
+    "camera_title": "ЦМОО • Шнековые сепараторы (Golden)",
+    "model_version": "v2_cascade"
+  },
+  {
+    "id": "inc-7d09f0b7",
+    "status": "new",
+    "notes": null,
+    "timestamp": 1792905364.3047483,
+    "time_str": "07:16:04",
+    "frame_idx": 40,
+    "track_id": 219,
+    "violations": [
+      "NO_HARDHAT"
+    ],
+    "bbox": [
+      1527,
+      339,
+      1624,
+      567
+    ],
+    "playlist": "golden",
+    "camera_title": "ЦМОО • Шнековые сепараторы (Golden)",
+    "model_version": "v2_cascade"
+  },
+  {
+    "id": "inc-328bb549",
+    "status": "new",
+    "notes": null,
+    "timestamp": 1792905361.3013673,
+    "time_str": "07:16:01",
+    "frame_idx": 34,
+    "track_id": 223,
+    "violations": [
+      "NO_HARDHAT"
+    ],
+    "bbox": [
+      1436,
+      145,
+      1508,
+      384
+    ],
+    "playlist": "golden",
+    "camera_title": "ЦМОО • Шнековые сепараторы (Golden)",
+    "model_version": "v2_cascade"
+  },
+  {
+    "id": "inc-fdcf27cc",
+    "status": "new",
+    "notes": null,
+    "timestamp": 1792905360.8010812,
+    "time_str": "07:16:00",
+    "frame_idx": 33,
+    "track_id": 217,
+    "violations": [
+      "NO_HARDHAT"
+    ],
+    "bbox": [
+      1043,
+      623,
+      1204,
+      1010
+    ],
+    "playlist": "golden",
+    "camera_title": "ЦМОО • Шнековые сепараторы (Golden)",
+    "model_version": "v2_cascade"
+  },
+  {
+    "id": "inc-24105bd5",
+    "status": "new",
+    "notes": null,
+    "timestamp": 1792905360.8010812,
+    "time_str": "07:16:00",
+    "frame_idx": 33,
+    "track_id": 211,
+    "violations": [
+      "NO_HARDHAT"
+    ],
+    "bbox": [
+      702,
+      377,
+      845,
+      690
+    ],
+    "playlist": "golden",
+    "camera_title": "ЦМОО • Шнековые сепараторы (Golden)",
+    "model_version": "v2_cascade"
+  },
+  {
+    "id": "inc-11e6869b",
+    "status": "new",
+    "notes": null,
+    "timestamp": 1792905358.795608,
+    "time_str": "07:15:58",
+    "frame_idx": 29,
+    "track_id": 214,
+    "violations": [
+      "NO_HARDHAT"
+    ],
+    "bbox": [
+      1138,
+      698,
+      1279,
+      986
+    ],
+    "playlist": "golden",
+    "camera_title": "ЦМОО • Шнековые сепараторы (Golden)",
+    "model_version": "v2_cascade"
+  },
+  {
+    "id": "inc-102746cc",
+    "status": "new",
+    "notes": null,
+    "timestamp": 1792905357.2955031,
+    "time_str": "07:15:57",
+    "frame_idx": 26,
+    "track_id": 184,
+    "violations": [
+      "NO_HARDHAT"
+    ],
+    "bbox": [
+      1332,
+      671,
+      1511,
+      1024
+    ],
+    "playlist": "golden",
+    "camera_title": "ЦМОО • Шнековые сепараторы (Golden)",
+    "model_version": "v2_cascade"
+  },
+  {
+    "id": "inc-f2625dab",
+    "status": "new",
+    "notes": null,
+    "timestamp": 1792905351.2851803,
+    "time_str": "07:15:51",
+    "frame_idx": 14,
+    "track_id": 198,
+    "violations": [
+      "NO_HARDHAT"
+    ],
+    "bbox": [
+      1213,
+      416,
+      1324,
+      667
+    ],
+    "playlist": "golden",
+    "camera_title": "ЦМОО • Шнековые сепараторы (Golden)",
+    "model_version": "v2_cascade"
+  },
+  {
+    "id": "inc-55d2af30",
+    "status": "new",
+    "notes": null,
+    "timestamp": 1792905350.7807982,
+    "time_str": "07:15:50",
+    "frame_idx": 13,
+    "track_id": 207,
+    "violations": [
+      "NO_HARDHAT"
+    ],
+    "bbox": [
+      1553,
+      429,
+      1632,
+      782
+    ],
+    "playlist": "golden",
+    "camera_title": "ЦМОО • Шнековые сепараторы (Golden)",
+    "model_version": "v2_cascade"
+  },
+  {
+    "id": "inc-b30a403f",
+    "status": "new",
+    "notes": null,
+    "timestamp": 1792905348.7744436,
+    "time_str": "07:15:48",
+    "frame_idx": 9,
+    "track_id": 178,
+    "violations": [
+      "NO_HARDHAT"
+    ],
+    "bbox": [
+      1211,
+      641,
+      1335,
+      1020
+    ],
+    "playlist": "golden",
+    "camera_title": "ЦМОО • Шнековые сепараторы (Golden)",
+    "model_version": "v2_cascade"
+  },
+  {
+    "id": "inc-ba432ecc",
+    "status": "new",
+    "notes": null,
+    "timestamp": 1792905348.2724,
+    "time_str": "07:15:48",
+    "frame_idx": 8,
+    "track_id": 200,
+    "violations": [
+      "NO_HARDHAT"
+    ],
+    "bbox": [
+      1277,
+      142,
+      1324,
+      369
+    ],
+    "playlist": "golden",
+    "camera_title": "ЦМОО • Шнековые сепараторы (Golden)",
+    "model_version": "v2_cascade"
+  },
+  {
+    "id": "inc-018f65c6",
+    "status": "new",
+    "notes": null,
+    "timestamp": 1792905346.2711642,
+    "time_str": "07:15:46",
+    "frame_idx": 4,
+    "track_id": 195,
+    "violations": [
+      "NO_HARDHAT"
+    ],
+    "bbox": [
+      1043,
+      259,
+      1140,
+      510
+    ],
+    "playlist": "golden",
+    "camera_title": "ЦМОО • Шнековые сепараторы (Golden)",
+    "model_version": "v2_cascade"
+  },
+  {
+    "id": "inc-a9ca81c3",
+    "status": "new",
+    "notes": null,
+    "timestamp": 1792905346.2711642,
+    "time_str": "07:15:46",
+    "frame_idx": 4,
+    "track_id": 194,
+    "violations": [
+      "NO_HARDHAT"
+    ],
+    "bbox": [
+      1086,
+      131,
+      1131,
+      295
+    ],
+    "playlist": "golden",
+    "camera_title": "ЦМОО • Шнековые сепараторы (Golden)",
+    "model_version": "v2_cascade"
+  }
+]

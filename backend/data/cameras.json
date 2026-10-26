@@ -1,0 +1,67 @@
+[
+  {
+    "id": "CAM-01-CMOO",
+    "title": "ЦМОО Пост №1 — Агрегатная секция и вход",
+    "location": "cmoo",
+    "rtsp_url": "rtsp://admin:stream@192.168.1.101:554/live",
+    "transport": "tcp",
+    "target_fps": 25,
+    "model": "v3_cascade",
+    "depth": "full",
+    "is_active": true,
+    "status": "online",
+    "created_at": 1792681957.0
+  },
+  {
+    "id": "CAM-02-PUMP",
+    "title": "Насосная станция №3 — Машинный зал и приводы",
+    "location": "gns",
+    "rtsp_url": "rtsp://admin:stream@192.168.1.102:554/live",
+    "transport": "tcp",
+    "target_fps": 25,
+    "model": "v3_cascade",
+    "depth": "full",
+    "is_active": true,
+    "status": "online",
+    "created_at": 1792681957.0
+  },
+  {
+    "id": "CAM-03-TRANS",
+    "title": "Транспортная галерея — Зона движения спецтехники",
+    "location": "cmoo",
+    "rtsp_url": "rtsp://admin:stream@192.168.1.103:554/live",
+    "transport": "tcp",
+    "target_fps": 25,
+    "model": "v3_cascade",
+    "depth": "full",
+    "is_active": true,
+    "status": "online",
+    "created_at": 1792681957.0
+  },
+  {
+    "id": "CAM-04-KNS",
+    "title": "КНС-4 — Приемное грабельное отделение",
+    "location": "kns",
+    "rtsp_url": "rtsp://admin:stream@192.168.1.104:554/live",
+    "transport": "udp",
+    "target_fps": 15,
+    "model": "mobilenet_v3",
+    "depth": "ppe_only",
+    "is_active": true,
+    "status": "online",
+    "created_at": 1792681957.0
+  },
+  {
+    "id": "CAM-05-RES",
+    "title": "РЧВ Северные — Резервуарная площадка и периметр",
+    "location": "res",
+    "rtsp_url": "rtsp://admin:stream@192.168.1.105:554/live",
+    "transport": "tcp",
+    "target_fps": 15,
+    "model": "mobilenet_v3",
+    "depth": "danger_zone",
+    "is_active": true,
+    "status": "online",
+    "created_at": 1792681957.0
+  }
+]

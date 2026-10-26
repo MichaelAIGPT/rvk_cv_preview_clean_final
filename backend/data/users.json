@@ -1,0 +1,76 @@
+[
+  {
+    "id": "usr-admin-01",
+    "username": "admin",
+    "display_name": "Иванов А.С.",
+    "primary_role": "admin",
+    "roles": [
+      "admin",
+      "executive_viewer"
+    ],
+    "region": "all_regions",
+    "region_label": "Все объекты",
+    "status": "active",
+    "created_at": 1790124717.114464,
+    "last_login": "Сегодня, 08:30"
+  },
+  {
+    "id": "usr-oper-01",
+    "username": "operator_cmoo",
+    "display_name": "Петров В.М.",
+    "primary_role": "operator",
+    "roles": [
+      "operator"
+    ],
+    "region": "cmoo",
+    "region_label": "Цех обезвоживания (ЦМОО)",
+    "status": "active",
+    "created_at": 1790988717.114464,
+    "last_login": "Сегодня, 09:15"
+  },
+  {
+    "id": "usr-hse-01",
+    "username": "hse_engineer",
+    "display_name": "Смирнова Е.К.",
+    "primary_role": "hse_specialist",
+    "roles": [
+      "hse_specialist",
+      "executive_viewer"
+    ],
+    "region": "all_regions",
+    "region_label": "Все объекты",
+    "status": "active",
+    "created_at": 1791420717.114464,
+    "last_login": "Вчера, 16:45"
+  },
+  {
+    "id": "usr-mgr-01",
+    "username": "shop_manager",
+    "display_name": "Кузнецов Д.И.",
+    "primary_role": "manager",
+    "roles": [
+      "manager",
+      "executive_viewer"
+    ],
+    "region": "cmoo",
+    "region_label": "ЦМОО и Насосные станции",
+    "status": "active",
+    "created_at": 1791852717.114464,
+    "last_login": "Сегодня, 07:50"
+  },
+  {
+    "id": "usr-ann-01",
+    "username": "annotator_pavel",
+    "display_name": "Сидоров П.Н.",
+    "primary_role": "annotator",
+    "roles": [
+      "annotator",
+      "qa_manager"
+    ],
+    "region": "all_regions",
+    "region_label": "Разметка Active Learning",
+    "status": "active",
+    "created_at": 1792284717.114464,
+    "last_login": "Вчера, 18:20"
+  }
+]

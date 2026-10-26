@@ -1,0 +1,28 @@
+[
+  {
+    "run_id": "run-001",
+    "timestamp": 1792880000,
+    "date_str": "25.10.2026 04:15",
+    "model_name": "Базовая модель Заказчика (ONNX 960x960)",
+    "playlist": "golden",
+    "total_alerts": 96,
+    "verified": 54,
+    "false_alarms": 42,
+    "precision": 56.3,
+    "f1_score": 0.68,
+    "notes": "Базовый запуск модели Заказчика (много ложных срабатываний на трубах и моторах)"
+  },
+  {
+    "run_id": "run-002",
+    "timestamp": 1792900000,
+    "date_str": "25.10.2026 06:10",
+    "model_name": "RVK SOTA V3 Cascade (EfficientNet-B0 + Active Learning)",
+    "playlist": "golden",
+    "total_alerts": 98,
+    "verified": 86,
+    "false_alarms": 12,
+    "precision": 87.8,
+    "f1_score": 0.92,
+    "notes": "Разметка оператора: подавление ложных труб 623-633 и треки М-306..М-310 (+31.5% прирост точности)"
+  }
+]
