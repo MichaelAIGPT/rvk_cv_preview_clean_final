@@ -211,8 +211,8 @@ start.bat
 
 1. **Клонируйте репозиторий:**
    ```bash
-   git clone https://github.com/MichaelAIGPT/rvk_cv_preview_clean.git
-   cd rvk_cv_preview_clean
+   git clone -b feature/rvk-safety-cv-v3.3 https://github.com/AIUniverstorage/rvk-safety-cv.git
+   cd rvk-safety-cv
    ```
 
 2. **Создайте и активируйте виртуальное окружение Python (рекомендуется Python 3.10 или 3.11):**
@@ -249,7 +249,7 @@ start.bat
 ## 📁 Структура репозитория
 
 ```
-rvk_cv_preview_clean/
+rvk-safety-cv/
 ├── backend/                      # Серверная часть платформы (FastAPI, конвейер, MLOps)
 │   ├── app.py                    # Главная точка входа веб-сервера
 │   ├── streamer.py               # Менеджер видеопотока, воспроизведения и очередей
