@@ -154,3 +154,58 @@ def clear_manual_overrides():
     """Clear all session manual boxes to view pure model inference."""
     return streamer.clear_manual_overrides()
 
+
+@router.get("/video_sources")
+def get_video_sources():
+    """Returns available test video streams and files for live player and camera inspection."""
+    sources = [
+        {
+            "id": "stream_annotated",
+            "title": "Камера #1 (ЦМОО): Живой поток с детекцией СИЗ (SOTA Cascade)",
+            "cam_id": "CAM-01-CMOO",
+            "location": "Цех механического обезвоживания (ЦМОО)",
+            "type": "annotated",
+            "url": "/previews/annotated_stream_h264.mp4",
+            "fps": 25,
+            "badge": "AI АННОТИРОВАН"
+        },
+        {
+            "id": "stream_raw",
+            "title": "Камера #1 (ЦМОО): Чистый RTSP-поток без разметки (Raw 1080p)",
+            "cam_id": "CAM-01-CMOO",
+            "location": "Цех механического обезвоживания (ЦМОО)",
+            "type": "raw",
+            "url": "/previews/raw_stream_h264.mp4",
+            "fps": 25,
+            "badge": "RAW RTSP"
+        },
+        {
+            "id": "stream_showcase",
+            "title": "Полная демонстрация: Детекция СИЗ + Контроль опасных зон",
+            "cam_id": "SHOWCASE-ALL",
+            "location": "Все технологические зоны",
+            "type": "showcase",
+            "url": "/previews/full_showcase_h264.mp4",
+            "fps": 25,
+            "badge": "SHOWCASE"
+        }
+    ]
+
+    # Also scan user videos folder
+    base_proj = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+    videos_dir = os.path.join(base_proj, "videos")
+    if os.path.exists(videos_dir):
+        for fname in sorted(os.listdir(videos_dir)):
+            if fname.lower().endswith((".mp4", ".avi", ".mkv", ".ts")):
+                sources.append({
+                    "id": f"user_video_{fname}",
+                    "title": f"Пользовательский поток: {fname}",
+                    "cam_id": "CUSTOM-STREAM",
+                    "location": "Папка /videos/",
+                    "type": "custom",
+                    "url": f"/videos/{fname}",
+                    "fps": 25,
+                    "badge": "НОВЫЙ ПОТОК"
+                })
+    return {"sources": sources, "total": len(sources)}
+

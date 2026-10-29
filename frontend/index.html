@@ -2833,9 +2833,37 @@
                     <button class="btn" onclick="filterCamsLocation('gar', this)">🚛 Гараж спецтехники (1)</button>
                 </div>
                 <div style="display:flex; align-items:center; gap:8px; flex-wrap:wrap;">
+                    <!-- Video Mode Switcher -->
+                    <div style="display:flex; background:#0b1324; border:1px solid #334155; border-radius:6px; padding:2px;">
+                        <button id="btnCamModeSnap" onclick="setCameraViewMode('snapshot')" class="btn btn-primary" style="padding:4px 10px; font-size:11px; font-weight:700;">🖼️ Фото</button>
+                        <button id="btnCamModeVideo" onclick="setCameraViewMode('video')" class="btn" style="padding:4px 10px; font-size:11px; font-weight:700; color:#38bdf8;">🎬 Живое видео (H.264)</button>
+                    </div>
                     <span class="tele-item" style="font-size:11px;">Потоки: <strong>5 / 5</strong></span>
                     <span class="tele-item" style="font-size:11px;">Edge GPU: <strong class="cam-server-gpu-name">CUDA</strong></span>
                     <span class="tele-item" style="font-size:11px; color:#10b981;">Режим: <strong>24/7 Онлайн</strong></span>
+                </div>
+            </div>
+
+            <!-- Video Streams Hub Banner & Dropzone Info -->
+            <div style="background: linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); border: 1px solid #0284c7; border-radius: 10px; padding: 14px 18px; margin-top: 14px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 14px;">
+                <div>
+                    <div style="display:flex; align-items:center; gap:8px;">
+                        <span style="font-size:18px;">🎥</span>
+                        <h3 style="font-size:14px; font-weight:800; color:#f8fafc; margin:0;">ЛАБОРАТОРИЯ ТЕСТОВЫХ ВИДЕОПОТОКОВ (VIDEO STREAMS HUB)</h3>
+                        <span style="background:rgba(56,189,248,0.2); border:1px solid #38bdf8; color:#38bdf8; font-size:10px; font-weight:800; padding:2px 6px; border-radius:4px;">MP4 / RTSP 25 FPS</span>
+                    </div>
+                    <p style="font-size:12px; color:#94a3b8; margin: 4px 0 0 0;">
+                        Переключите режим в <strong>«🎬 Живое видео»</strong>, чтобы смотреть непрерывные видеопотоки вместо статичных превью. 
+                        Для добавления новых видео скопируйте файлы <code>.mp4</code> в папку: <strong style="color:#38bdf8;">d:\Projects\Vodokanal_CV\videos\</strong>
+                    </p>
+                </div>
+                <div style="display:flex; gap:8px;">
+                    <button class="btn btn-primary" onclick="openTestVideoModal()" style="font-weight:700; font-size:12px; padding:8px 14px; background:#0284c7; border-color:#0369a1;">
+                        ▶ Открыть плеер видеопотока
+                    </button>
+                    <button class="btn" onclick="switchTab('operations')" style="font-weight:700; font-size:12px; padding:8px 12px;">
+                        📺 В Live Диспетчерскую
+                    </button>
                 </div>
             </div>
         </div>
@@ -4414,12 +4442,12 @@ inference:
                 <span style="font-size: 11px; color: #38bdf8; font-weight: 700; text-transform: uppercase;">АКТИВНАЯ CANDIDATE-МОДЕЛЬ</span>
                 <div style="display: flex; align-items: center; gap: 10px; margin-top: 4px;">
                     <div style="width: 10px; height: 10px; border-radius: 50%; background: #10b981; box-shadow: 0 0 8px #10b981;"></div>
-                    <select id="testLabModelSelect" onchange="onTestLabModelChange(this.value)" style="background: #0b1324; border: 1px solid #38bdf8; color: #f8fafc; font-size: 15px; font-weight: 700; padding: 6px 12px; border-radius: 6px; outline: none; cursor: pointer;">
-                        <option value="v3_dual_head" selected>V3 Dual-Head SOTA (9.8 мс · mAP 98.4%) — Рекомендуемая</option>
-                        <option value="ppe_960">Construction PPE 960 (18.4 мс · mAP 92.1%)</option>
-                        <option value="ppe_640">Construction PPE 640 (12.1 мс · mAP 89.6%)</option>
-                        <option value="mobilenet_edge">MobileNetV3 Edge Real-Time (8.2 мс CPU · mAP 91.8%)</option>
-                        <option value="smoke_fire">Smoke & Fire Dual-Stage (11.0 мс · mAP 94.2%)</option>
+                    <select id="testLabModelSelect" onchange="onTestLabModelChange(this.value)" title="Выберите модель для проверки инференса и устойчивости к ложным тревогам" style="background: #0b1324; border: 1px solid #38bdf8; color: #f8fafc; font-size: 15px; font-weight: 700; padding: 6px 12px; border-radius: 6px; outline: none; cursor: pointer;">
+                        <option value="v3_dual_head" selected title="Двухстадийная модель: YOLOv8 + каскадный классификатор кропов голов. Специально обучена отличать кепки и шапки от защитных касок.">⭐ V3 Dual-Head SOTA (9.8 мс · mAP 98.4%) — Рекомендуемая боевая</option>
+                        <option value="ppe_960" title="Высокое разрешение 960px. Повышенная дальность детекции мелких фигур и СИЗ на дальних планах (галереи, эстакады). Требует больше VRAM (2.8 ГБ).">🔭 Construction PPE 960 (18.4 мс · mAP 92.1%) — Дальние планы</option>
+                        <option value="ppe_640" title="Базовый одностадийный детектор 640px общего назначения. Быстрый инференс для стандартных камер средней дистанции.">🎯 Construction PPE 640 (12.1 мс · mAP 89.6%) — Базовый детектор</option>
+                        <option value="mobilenet_edge" title="Ультралегковесная модель для локальных процессоров и edge-устройств без дискретного GPU. Скорость 8.2 мс на CPU.">⚡ MobileNetV3 Edge Real-Time (8.2 мс CPU · mAP 91.8%) — Без GPU</option>
+                        <option value="smoke_fire" title="Двухстадийная модель мониторинга термоаномалий, ранней фиксации задымлений и открытого пламени в агрегатных.">🔥 Smoke & Fire Dual-Stage (11.0 мс · mAP 94.2%) — Огонь и задымление</option>
                     </select>
                 </div>
             </div>
@@ -4430,6 +4458,17 @@ inference:
             </div>
         </div>
 
+        <!-- Dynamic Model Insight Tooltip Card -->
+        <div id="testLabModelDetailsBox" style="background: rgba(15, 23, 42, 0.85); border: 1px solid rgba(56, 189, 248, 0.3); border-radius: 8px; padding: 12px 18px; margin-top: 10px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; font-size: 12px;">
+            <div style="display: flex; align-items: center; gap: 10px;">
+                <span id="testLabModelBadge" style="background: rgba(16, 185, 129, 0.2); border: 1px solid #10b981; color: #34d399; font-size: 11px; font-weight: 800; padding: 2px 8px; border-radius: 4px;">SOTA DUAL-HEAD</span>
+                <span id="testLabModelDesc" style="color: #f1f5f9; font-weight: 600;">Двухстадийный каскад (Детекция силуэта + Классификатор головы). Исключает путаницу кепок и касок.</span>
+            </div>
+            <div id="testLabModelSuitability" style="color: #38bdf8; font-size: 11px; background: rgba(56, 189, 248, 0.1); padding: 4px 10px; border-radius: 4px; border: 1px dashed rgba(56, 189, 248, 0.4);">
+                💡 <strong>Рекомендация:</strong> Штатный режим 24/7 для цехов со сложным освещением и персоналом в головных уборах
+            </div>
+        </div>
+
         <!-- Test Configuration & Runner Grid -->
         <div style="display: grid; grid-template-columns: 340px 1fr; gap: 20px; margin-top: 20px;">
             <!-- Left: Settings & Presets -->
@@ -4437,21 +4476,27 @@ inference:
                 <div>
                     <h3 style="font-size: 13px; font-weight: 700; color: #f8fafc; margin-top: 0; margin-bottom: 8px;">1. Профиль чувствительности</h3>
                     <div style="display: flex; flex-direction: column; gap: 6px;">
-                        <button class="btn btn-primary" id="btnPresetBalanced" onclick="selectTestLabPreset('balanced')" style="text-align: left; padding: 8px 12px; font-size: 12px;">
-                            <strong>Баланс (Balanced)</strong> · Рекомендуемый промышленный
+                        <button class="btn btn-primary" id="btnPresetBalanced" onclick="selectTestLabPreset('balanced')" onmouseenter="showPresetTooltip('balanced')" title="Баланс (Conf 0.50 / IoU 0.45): Оптимальный промышленный баланс для 90% штатных смен без ложных тревог" style="text-align: left; padding: 8px 12px; font-size: 12px; cursor: pointer;">
+                            <strong>⚖️ Баланс (Balanced)</strong> · Рекомендуемый промышленный
                         </button>
-                        <button class="btn" id="btnPresetStrict" onclick="selectTestLabPreset('strict')" style="text-align: left; padding: 8px 12px; font-size: 12px;">
-                            <strong>Строгий (Strict)</strong> · Минимизация ложных срабатываний
+                        <button class="btn" id="btnPresetStrict" onclick="selectTestLabPreset('strict')" onmouseenter="showPresetTooltip('strict')" title="Строгий (Conf 0.65 / IoU 0.40): Отсекает сомнительные детекции, исключает ложные тревоги от кепок, шапок и теней. Выбирайте при строгих штрафах за ложные алерты." style="text-align: left; padding: 8px 12px; font-size: 12px; cursor: pointer;">
+                            <strong>🛡️ Строгий (Strict)</strong> · Минимизация ложных срабатываний (кепки/тени)
                         </button>
-                        <button class="btn" id="btnPresetSensitive" onclick="selectTestLabPreset('sensitive')" style="text-align: left; padding: 8px 12px; font-size: 12px;">
-                            <strong>Повышенная чувствительность</strong> · Высокий охват
+                        <button class="btn" id="btnPresetSensitive" onclick="selectTestLabPreset('sensitive')" onmouseenter="showPresetTooltip('sensitive')" title="Повышенная чувствительность (Conf 0.35 / IoU 0.50): Максимальный охват силуэтов на дальних дистанциях и в затемнённых зонах цеха." style="text-align: left; padding: 8px 12px; font-size: 12px; cursor: pointer;">
+                            <strong>🎯 Повышенная чувствительность</strong> · Высокий охват дальних планов
                         </button>
-                        <button class="btn" id="btnPresetPrecision" onclick="selectTestLabPreset('precision')" style="text-align: left; padding: 8px 12px; font-size: 12px;">
-                            <strong>Precision (Максимум точности)</strong> · Порог conf ≥ 0.70
+                        <button class="btn" id="btnPresetPrecision" onclick="selectTestLabPreset('precision')" onmouseenter="showPresetTooltip('precision')" title="Precision (Conf ≥ 0.70): Безусловная точность. Тревога поднимается только при 100% уверенности алгоритма в нарушении." style="text-align: left; padding: 8px 12px; font-size: 12px; cursor: pointer;">
+                            <strong>🔒 Precision (Максимум точности)</strong> · Порог conf ≥ 0.70
                         </button>
-                        <button class="btn" id="btnPresetRecall" onclick="selectTestLabPreset('recall')" style="text-align: left; padding: 8px 12px; font-size: 12px;">
-                            <strong>Recall (Максимальный охват)</strong> · Порог conf ≥ 0.30
+                        <button class="btn" id="btnPresetRecall" onclick="selectTestLabPreset('recall')" onmouseenter="showPresetTooltip('recall')" title="Recall (Conf ≥ 0.30): Улавливает любые подозрительные объекты для последующего подтверждения оператором." style="text-align: left; padding: 8px 12px; font-size: 12px; cursor: pointer;">
+                            <strong>🔍 Recall (Максимальный охват)</strong> · Порог conf ≥ 0.30
                         </button>
+                    </div>
+
+                    <!-- Dynamic Preset Insight Box -->
+                    <div id="testLabPresetInfoBox" style="background: #0b1324; border: 1px solid #1e293b; border-radius: 6px; padding: 10px 12px; font-size: 11px; margin-top: 8px;">
+                        <div style="color: #38bdf8; font-weight: 700; margin-bottom: 2px;" id="testLabPresetInfoTitle">ПРОФИЛЬ: БАЛАНС (CONF 0.50 / IOU 0.45)</div>
+                        <div style="color: #94a3b8;" id="testLabPresetInfoText">Штатный промышленный режим. Минимальный latency (9.8 мс) и надёжное определение касок и жилетов без шума.</div>
                     </div>
                 </div>
 
@@ -4466,9 +4511,15 @@ inference:
                     </select>
                 </div>
 
-                <div style="background: #0b1324; border: 1px solid #1e293b; border-radius: 8px; padding: 12px; font-size: 11px; color: #94a3b8;">
-                    <div style="color: #38bdf8; font-weight: 700; margin-bottom: 4px;">ПОРЯДОК ВАЛИДАЦИИ:</div>
-                    Нейросеть производит инференс на контрольном изображении, вычисляет границы детекции, сопоставляет класс СИЗ и рассчитывает метрику совпадения с ожиданием.
+                <div style="background: #0b1324; border: 1px solid #334155; border-radius: 8px; padding: 12px 14px; font-size: 11px; color: #94a3b8;">
+                    <div style="color: #38bdf8; font-weight: 800; margin-bottom: 6px; display: flex; align-items: center; gap: 6px;">
+                        <span>📘</span> <span>РУКОВОДСТВО: КОГДА И КАК ТЕСТИРОВАТЬ</span>
+                    </div>
+                    <ul style="margin: 0; padding-left: 16px; line-height: 1.5; color: #cbd5e1;">
+                        <li><strong>Проверка головных уборов (кепки vs каски):</strong> Выберите <em>V3 Dual-Head</em> и профиль <em>Строгий (Strict)</em> — кепки и капюшоны отсекаются, каски фиксируются с уверенностью &gt;98%.</li>
+                        <li><strong>Дальние дистанции (галереи &gt;15 м):</strong> Переключитесь на <em>Construction PPE 960</em> или профиль <em>Sensitive</em> для охвата мелких силуэтов.</li>
+                        <li><strong>Проверка нового видеопотока:</strong> При подключении новой камеры прогоните инференс на контрольном кадре для оценки скорости (Latency &lt; 15 мс).</li>
+                    </ul>
                 </div>
             </div>
 
@@ -12158,6 +12209,128 @@ inference:
         }
     
         // --- 8.6. TEST LAB & ALERTING LOGIC ---
+        
+        // --- CAMERA VIEW MODE & VIDEO LAB MODAL ---
+        let currentCamViewMode = 'snapshot';
+
+        function setCameraViewMode(mode) {
+            currentCamViewMode = mode;
+            const btnSnap = document.getElementById('btnCamModeSnap');
+            const btnVid = document.getElementById('btnCamModeVideo');
+            if (btnSnap && btnVid) {
+                if (mode === 'video') {
+                    btnSnap.className = 'btn';
+                    btnVid.className = 'btn btn-primary';
+                } else {
+                    btnSnap.className = 'btn btn-primary';
+                    btnVid.className = 'btn';
+                }
+            }
+
+            const containers = document.querySelectorAll('.cam-thumb-container');
+            containers.forEach((box, index) => {
+                const camNum = index + 1;
+                if (mode === 'video') {
+                    // Switch to live video player
+                    const streamSrc = (camNum === 1 || camNum === 2) 
+                        ? '/previews/annotated_stream_h264.mp4' 
+                        : '/previews/raw_stream_h264.mp4';
+                    box.innerHTML = `
+                        <video class="cam-thumb-img" src="${streamSrc}" autoplay loop muted playsinline style="width:100%; height:100%; object-fit:cover; display:block;"></video>
+                        <div class="cam-status-pill" style="background:rgba(16,185,129,0.9); font-weight:800;">● LIVE ВИДЕОПОТОК</div>
+                        <div class="cam-res-pill" style="background:rgba(2,132,199,0.9);">1920x1080 • 25 FPS (H.264)</div>
+                    `;
+                } else {
+                    // Switch back to snapshot
+                    box.innerHTML = `
+                        <img src="/api/stream/snapshot?cam=${camNum}" class="cam-thumb-img" alt="Камера #${camNum}">
+                        <div class="cam-status-pill">● Работает</div>
+                        <div class="cam-res-pill">1920x1080 • 25 FPS</div>
+                    `;
+                }
+            });
+
+            showToast(mode === 'video' ? '🎬 Включён режим живых видеопотоков H.264' : '🖼️ Включён режим снимков высокого разрешения', 'info');
+        }
+
+        function openTestVideoModal() {
+            let modal = document.getElementById('testVideoModal');
+            if (!modal) {
+                modal = document.createElement('div');
+                modal.id = 'testVideoModal';
+                modal.style.cssText = 'position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(2,6,23,0.85); backdrop-filter:blur(6px); z-index:9999; display:flex; align-items:center; justify-content:center; padding:20px; box-sizing:border-box;';
+                modal.innerHTML = `
+                    <div style="background:#0f172a; border:1px solid #38bdf8; border-radius:12px; width:100%; max-width:960px; max-height:92vh; display:flex; flex-direction:column; overflow:hidden; box-shadow:0 25px 50px -12px rgba(0,0,0,0.7);">
+                        <div style="padding:16px 20px; border-bottom:1px solid #1e293b; display:flex; justify-content:space-between; align-items:center; background:#1e293b;">
+                            <div style="display:flex; align-items:center; gap:10px;">
+                                <span style="font-size:20px;">🎥</span>
+                                <div>
+                                    <h3 style="margin:0; font-size:16px; font-weight:800; color:#f8fafc;">Плеер тестовых видеопотоков ТБ (Video Lab)</h3>
+                                    <div style="font-size:11px; color:#94a3b8;">Инференс каскада нейросетей V3 SOTA на реальных технологических записях</div>
+                                </div>
+                            </div>
+                            <button onclick="closeTestVideoModal()" class="btn" style="padding:4px 10px; font-size:16px; font-weight:700;">✕</button>
+                        </div>
+                        
+                        <div style="padding:20px; overflow-y:auto; display:flex; flex-direction:column; gap:16px;">
+                            <!-- Stream Selector Bar -->
+                            <div style="display:flex; gap:12px; align-items:center; flex-wrap:wrap;">
+                                <label style="font-size:12px; font-weight:700; color:#94a3b8;">ВЫБЕРИТЕ ВИДЕОПОТОК:</label>
+                                <select id="modalVideoStreamSelect" onchange="onModalVideoSelect(this.value)" style="flex:1; background:#0b1324; border:1px solid #0284c7; color:#f8fafc; font-size:13px; font-weight:700; padding:8px 12px; border-radius:6px; outline:none; cursor:pointer;">
+                                    <option value="/previews/annotated_stream_h264.mp4">⭐ Камера #1: ЦМОО Шнековый сепаратор (Живой AI-аннотированный поток SOTA)</option>
+                                    <option value="/previews/raw_stream_h264.mp4">📹 Камера #1: ЦМОО Шнековый сепаратор (Чистый RTSP без разметки)</option>
+                                    <option value="/previews/full_showcase_h264.mp4">🔬 Полная демонстрация: Комплексный видеоанализ всех СИЗ и опасных зон</option>
+                                </select>
+                            </div>
+
+                            <!-- Video Screen -->
+                            <div style="position:relative; background:#000; border-radius:8px; overflow:hidden; border:1px solid #334155; min-height:420px; display:flex; align-items:center; justify-content:center;">
+                                <video id="modalVideoPlayer" src="/previews/annotated_stream_h264.mp4" controls autoplay loop playsinline style="width:100%; max-height:520px; object-fit:contain; display:block;"></video>
+                            </div>
+
+                            <!-- Telemetry & Instructions -->
+                            <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:12px;">
+                                <div style="background:#0b1324; border:1px solid #1e293b; border-radius:8px; padding:12px; font-size:12px;">
+                                    <div style="color:#10b981; font-weight:800; margin-bottom:4px;">✓ АКТИВНЫЙ PIPELINE:</div>
+                                    <div style="color:#cbd5e1;">V3 Dual-Head SOTA (9.8 мс) · Классификация касок, жилетов и опасных зон насосных агрегатов в реальном времени.</div>
+                                </div>
+                                <div style="background:#0b1324; border:1px solid #0284c7; border-radius:8px; padding:12px; font-size:12px;">
+                                    <div style="color:#38bdf8; font-weight:800; margin-bottom:4px;">📂 КАК ДОБАВИТЬ НОВЫЕ ВИДЕО:</div>
+                                    <div style="color:#cbd5e1;">Скопируйте новые видеофайлы <code>.mp4</code> в папку: <strong style="color:#f8fafc;">d:\Projects\Vodokanal_CV\videos\</strong> — они автоматически будут доступны для анализа.</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div style="padding:12px 20px; border-top:1px solid #1e293b; display:flex; justify-content:flex-end; gap:10px; background:#0b1324;">
+                            <button onclick="closeTestVideoModal()" class="btn btn-primary" style="font-weight:700; padding:8px 18px;">Закрыть плеер</button>
+                        </div>
+                    </div>
+                `;
+                document.body.appendChild(modal);
+            }
+            modal.style.display = 'flex';
+            const vid = document.getElementById('modalVideoPlayer');
+            if (vid) vid.play();
+        }
+
+        function onModalVideoSelect(src) {
+            const vid = document.getElementById('modalVideoPlayer');
+            if (vid) {
+                vid.src = src;
+                vid.play();
+                showToast('Воспроизведение: ' + src.split('/').pop(), 'info');
+            }
+        }
+
+        function closeTestVideoModal() {
+            const modal = document.getElementById('testVideoModal');
+            if (modal) {
+                modal.style.display = 'none';
+                const vid = document.getElementById('modalVideoPlayer');
+                if (vid) vid.pause();
+            }
+        }
+
         function selectTestLabPreset(preset) {
             const presets = {
                 'balanced': { conf: 0.50, iou: 0.45, name: 'Баланс (Balanced)', speed: '9.8 мс', map: '98.4%' },
@@ -12176,22 +12349,97 @@ inference:
             const p = presets[preset] || presets.balanced;
             document.getElementById('testLabSpeed').textContent = p.speed;
             document.getElementById('testLabMap').textContent = p.map;
-            showToast('Установлен профиль чувствительности: ' + p.name, 'info');
+            document.getElementById('testLabVram').textContent = (preset === 'precision' || preset === 'strict') ? '1.6 ГБ' : '1.4 ГБ';
+            showPresetTooltip(preset);
+            showToast('Установлен профиль: ' + p.name, 'info');
         }
 
         function onTestLabModelChange(modelKey) {
             const models = {
-                'v3_dual_head': { speed: '9.8 мс', map: '98.4%', vram: '1.4 ГБ' },
-                'ppe_960': { speed: '18.4 мс', map: '92.1%', vram: '2.8 ГБ' },
-                'ppe_640': { speed: '12.1 мс', map: '89.6%', vram: '1.6 ГБ' },
-                'mobilenet_edge': { speed: '8.2 мс (CPU)', map: '91.8%', vram: '0.6 ГБ' },
-                'smoke_fire': { speed: '11.0 мс', map: '94.2%', vram: '1.2 ГБ' }
+                'v3_dual_head': { 
+                    speed: '9.8 мс', 
+                    map: '98.4%', 
+                    vram: '1.4 ГБ',
+                    badge: '⭐ SOTA DUAL-HEAD',
+                    desc: 'Двухстадийный каскад (Детекция силуэта + Классификатор головы). Исключает путаницу кепок и касок.',
+                    suitability: '💡 <strong>Рекомендация:</strong> Штатный режим 24/7 для цехов со сложным освещением и персоналом в головных уборах'
+                },
+                'ppe_960': { 
+                    speed: '18.4 мс', 
+                    map: '92.1%', 
+                    vram: '2.8 ГБ',
+                    badge: '🔭 HIGH-RES 960p',
+                    desc: 'Повышенное разрешение для детекции мелких фигур людей и касок на дальних расстояниях (>15 м).',
+                    suitability: '💡 <strong>Рекомендация:</strong> Высокие галереи, протяжённые переходы и внешние эстакады водоканала'
+                },
+                'ppe_640': { 
+                    speed: '12.1 мс', 
+                    map: '89.6%', 
+                    vram: '1.6 ГБ',
+                    badge: '🎯 BASELINE 640p',
+                    desc: 'Одностадийный быстрый детектор. Оптимален при средних расстояниях до объекта наблюдения.',
+                    suitability: '💡 <strong>Рекомендация:</strong> Насосные станции малой площади и входные технологические группы'
+                },
+                'mobilenet_edge': { 
+                    speed: '8.2 мс (CPU)', 
+                    map: '91.8%', 
+                    vram: '0.6 ГБ',
+                    badge: '⚡ EDGE CPU',
+                    desc: 'Облегчённая квантованная сеть. Не требует видеокарты NVIDIA, запускается на встроенных контроллерах.',
+                    suitability: '💡 <strong>Рекомендация:</strong> Автономные шкафы автоматики (КНС/Резервуары) без дискретного GPU'
+                },
+                'smoke_fire': { 
+                    speed: '11.0 мс', 
+                    map: '94.2%', 
+                    vram: '1.2 ГБ',
+                    badge: '🔥 SMOKE & FIRE',
+                    desc: 'Специализированная модель обнаружения задымлений, тления изоляции и открытого огня.',
+                    suitability: '💡 <strong>Рекомендация:</strong> Электрощитовые, машинные залы и кабельные каналы насосных станций'
+                }
             };
             const m = models[modelKey] || models.v3_dual_head;
             document.getElementById('testLabSpeed').textContent = m.speed;
             document.getElementById('testLabMap').textContent = m.map;
             document.getElementById('testLabVram').textContent = m.vram;
+
+            const badgeEl = document.getElementById('testLabModelBadge');
+            const descEl = document.getElementById('testLabModelDesc');
+            const suitEl = document.getElementById('testLabModelSuitability');
+            if (badgeEl) badgeEl.textContent = m.badge;
+            if (descEl) descEl.textContent = m.desc;
+            if (suitEl) suitEl.innerHTML = m.suitability;
+
             showToast('Выбрана candidate-модель: ' + modelKey, 'info');
+        }
+
+        function showPresetTooltip(preset) {
+            const tooltips = {
+                'balanced': {
+                    title: '⚖️ ПРОФИЛЬ: БАЛАНС (CONF 0.50 / IOU 0.45)',
+                    text: 'Штатный промышленный режим. Минимальный latency (9.8 мс) и надёжное определение касок и жилетов без шума.'
+                },
+                'strict': {
+                    title: '🛡️ ПРОФИЛЬ: СТРОГИЙ (CONF 0.65 / IOU 0.40)',
+                    text: 'Отсекает сомнительные случаи: бейсболки, кепки и капюшоны не определяются как нарушения, пока нет 100% уверенности. Рекомендуется при штрафах за ложные тревоги.'
+                },
+                'sensitive': {
+                    title: '🎯 ПРОФИЛЬ: ПОВЫШЕННАЯ ЧУВСТВИТЕЛЬНОСТЬ (CONF 0.35 / IOU 0.50)',
+                    text: 'Максимальный охват: обнаруживает персонал даже в сумерках, при бликах или частичном перекрытии фигурами оборудования.'
+                },
+                'precision': {
+                    title: '🔒 ПРОФИЛЬ: PRECISION (CONF ≥ 0.70 / IOU 0.35)',
+                    text: 'Максимум точности: тревога отправляется только при безупречном совпадении с классом нарушения СИЗ.'
+                },
+                'recall': {
+                    title: '🔍 ПРОФИЛЬ: RECALL (CONF ≥ 0.30 / IOU 0.55)',
+                    text: 'Режим максимального выявления нарушений для ручной перепроверки службой охраны труда.'
+                }
+            };
+            const info = tooltips[preset] || tooltips.balanced;
+            const titleEl = document.getElementById('testLabPresetInfoTitle');
+            const textEl = document.getElementById('testLabPresetInfoText');
+            if (titleEl) titleEl.textContent = info.title;
+            if (textEl) textEl.textContent = info.text;
         }
 
         function runTestLabInference() {

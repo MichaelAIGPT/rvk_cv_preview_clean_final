@@ -69,6 +69,11 @@ PREVIEWS_DIR = os.path.join(BASE_DIR, "dataset", "previews")
 if os.path.exists(PREVIEWS_DIR):
     app.mount("/previews", StaticFiles(directory=PREVIEWS_DIR), name="previews")
 
+VIDEOS_DIR = os.path.join(BASE_DIR, "videos")
+if not os.path.exists(VIDEOS_DIR):
+    os.makedirs(VIDEOS_DIR, exist_ok=True)
+app.mount("/videos", StaticFiles(directory=VIDEOS_DIR), name="videos")
+
 @app.get("/dataset")
 def read_dataset_viewer():
     viewer_path = os.path.join(DATASET_DIR, "crops_viewer.html")
