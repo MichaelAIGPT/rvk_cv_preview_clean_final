@@ -1,4 +1,4 @@
-﻿import os
+import os
 import sys
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
@@ -18,9 +18,9 @@ from backend.api.routes_system import router as system_router
 from backend.api.routes_executive import router as executive_router
 
 app = FastAPI(
-    title="Р Р’Рљ Safety | РЎРµСЂРІРµСЂ РІРёРґРµРѕР°РЅР°Р»РёС‚РёРєРё РўР‘",
-    description="РљРѕРјРїР»РµРєСЃРЅР°СЏ СЃРёСЃС‚РµРјР° РјРѕРЅРёС‚РѕСЂРёРЅРіР° РЎРР— Рё РѕРїР°СЃРЅС‹С… Р·РѕРЅ РґР»СЏ РћРћРћ В«Р Р’Рљ.Р¦РёС„СЂРѕРІС‹Рµ СЂРµС€РµРЅРёСЏВ» (Р“Рљ В«Р РѕСЃРІРѕРґРѕРєР°РЅР°Р»В»)",
-    version="3.3.0"
+    title="РВК Safety | Сервер видеоаналитики ТБ",
+    description="Комплексная система мониторинга СИЗ и опасных зон для ООО «РВК.Цифровые решения» (ГК «Росводоканал»)",
+    version="1.0.0"
 )
 
 # CORS configuration
@@ -161,7 +161,6 @@ if __name__ == "__main__":
 
     port = int(os.environ.get("PORT", find_port()))
     print(f"\n=======================================================")
-    print(f"рџљЂ RVK Safety CV server starting on http://localhost:{port}")
+    print(f"🚀 RVK Safety CV server starting on http://localhost:{port}")
     print(f"=======================================================\n")
     uvicorn.run("backend.app:app", host="0.0.0.0", port=port, reload=False)
-

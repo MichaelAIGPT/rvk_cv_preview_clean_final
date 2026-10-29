@@ -1,4 +1,4 @@
-﻿import os
+import os
 import sys
 import time
 import json
@@ -31,7 +31,7 @@ class SystemLogger:
             self.file_logger.addHandler(handler)
 
         # Log initial startup entry
-        self.info("SYSTEM", "РЎРёСЃС‚РµРјР° Р Р’Рљ.Safety CV Р·Р°РїСѓС‰РµРЅР°", {"version": "3.3 SOTA", "mode": "production"})
+        self.info("SYSTEM", "Система РВК.Safety CV запущена", {"version": "3.2 SOTA", "mode": "production"})
 
     def _add_entry(self, level: str, category: str, message: str, meta: Optional[Dict[str, Any]] = None):
         entry = {
@@ -91,8 +91,7 @@ class SystemLogger:
 
     def clear(self):
         self.buffer.clear()
-        self.info("AUDIT", "Р–СѓСЂРЅР°Р» СЃРѕР±С‹С‚РёР№ РѕС‡РёС‰РµРЅ Р°РґРјРёРЅРёСЃС‚СЂР°С‚РѕСЂРѕРј")
-        return {"status": "ok", "message": "Р‘СѓС„РµСЂ Р»РѕРіРѕРІ РѕС‡РёС‰РµРЅ"}
+        self.info("AUDIT", "Журнал событий очищен администратором")
+        return {"status": "ok", "message": "Буфер логов очищен"}
 
 sys_logger = SystemLogger()
-
