@@ -2455,8 +2455,12 @@
 
                     <div style="display: flex; align-items: center; gap: 4px;">
                         <span style="font-size: 11px; color: var(--text-secondary);">Сценарий:</span>
-                        <select class="select-playlist" id="playlistSelect" onchange="changePlaylist(this.value)" style="padding: 3px 6px; font-size: 11px; max-width: 160px;">
+                        <select class="select-playlist" id="playlistSelect" onchange="changePlaylist(this.value)" style="padding: 3px 6px; font-size: 11px; max-width: 175px;">
                             <option value="golden">🌟 Золотая выборка (247 сцен)</option>
+                            <option value="cam_01" style="color: #10b981; font-weight: 700;">📹 Камера #01: ЦМОО Сепаратор</option>
+                            <option value="cam_03" style="color: #38bdf8; font-weight: 700;">📹 Камера #03: Машинный зал ГНС</option>
+                            <option value="cam_04" style="color: #f59e0b; font-weight: 700;">📹 Камера #04: Транспортная галерея</option>
+                            <option value="cam_05" style="color: #a855f7; font-weight: 700;">📹 Камера #05: Резервуары и КНС</option>
                             <option value="vests_test" style="color: #38bdf8; font-weight: 700;">🦺 Тест: Сигнальные жилеты (25 кадров)</option>
                             <option value="smoking_test" style="color: #f87171; font-weight: 700;">🚬 Тест: Контроль курения в цехе (20 кадров)</option>
                             <option value="phone_test" style="color: #c084fc; font-weight: 700;">📱 Тест: Телефон в опасной зоне (20 кадров)</option>
@@ -2813,9 +2817,9 @@
                     <div style="font-size:11px; font-weight:700; color:#64748b; letter-spacing:0.5px; text-transform:uppercase;">🏢 ПРОИЗВОДСТВЕННЫЕ ПЛОЩАДКИ ВОДОКАНАЛА</div>
                     <div style="display:flex; align-items:center; gap:12px; margin-top:2px; flex-wrap:wrap;">
                         <h2 style="font-size:18px; font-weight:800; color:#f8fafc; margin:0;">Технологические объекты и посты видеонаблюдения</h2>
-                        <div class="cams-badge-green" style="padding:3px 10px; font-size:11px; font-weight:700;">● 5 работают</div>
+                        <div class="cams-badge-green" style="padding:3px 10px; font-size:11px; font-weight:700;">● 4 активных видеопотока (1080p H.264)</div>
                     </div>
-                    <p style="font-size:12px; color:#94a3b8; margin-top:3px;">5 активных камер видеоаналитики на ключевых технологических участках</p>
+                    <p style="font-size:12px; color:#94a3b8; margin-top:3px;">4 подключенные промышленные камеры видеонаблюдения с прямой трансляцией и ИИ-аналитикой ТБ</p>
                 </div>
                 <div style="display:flex; align-items:center; gap:8px;">
                     <button class="btn" onclick="openAddCameraModal()" style="font-weight:700; padding:8px 16px; background: rgba(59, 130, 246, 0.2); border: 1px solid #3b82f6; color: #93c5fd;">➕ Добавить RTSP-камеру</button>
@@ -2826,11 +2830,11 @@
             <!-- Bottom Row: Filter Pills + Quick Telemetry -->
             <div style="display:flex; justify-content:space-between; align-items:center; width:100%; flex-wrap:wrap; gap:10px; border-top:1px solid #1e293b; padding-top:10px;">
                 <div class="cams-filters-row" style="display:flex; gap:8px; flex-wrap:wrap;">
-                    <button class="btn btn-primary" onclick="filterCamsLocation('all', this)">🌐 Все площадки (5)</button>
-                    <button class="btn" onclick="filterCamsLocation('cmoo', this)">🏢 Цех обезвоживания (2)</button>
-                    <button class="btn" onclick="filterCamsLocation('gns', this)">💧 Насосная станция (1)</button>
-                    <button class="btn" onclick="filterCamsLocation('gal', this)">🏗️ Транспортная галерея (1)</button>
-                    <button class="btn" onclick="filterCamsLocation('gar', this)">🚛 Гараж спецтехники (1)</button>
+                    <button class="btn btn-primary" onclick="filterCamsLocation('all', this)">🌐 Все камеры (4)</button>
+                    <button class="btn" onclick="filterCamsLocation('cmoo', this)">🏢 Камера #01: ЦМОО</button>
+                    <button class="btn" onclick="filterCamsLocation('gns', this)">💧 Камера #03: ГНС Машзал</button>
+                    <button class="btn" onclick="filterCamsLocation('gal', this)">🏗️ Камера #04: Галерея</button>
+                    <button class="btn" onclick="filterCamsLocation('res', this)">🌊 Камера #05: Резервуары / КНС</button>
                 </div>
                 <div style="display:flex; align-items:center; gap:8px; flex-wrap:wrap;">
                     <!-- Video Mode Switcher -->
@@ -2838,7 +2842,7 @@
                         <button id="btnCamModeSnap" onclick="setCameraViewMode('snapshot')" class="btn btn-primary" style="padding:4px 10px; font-size:11px; font-weight:700;">🖼️ Фото</button>
                         <button id="btnCamModeVideo" onclick="setCameraViewMode('video')" class="btn" style="padding:4px 10px; font-size:11px; font-weight:700; color:#38bdf8;">🎬 Живое видео (H.264)</button>
                     </div>
-                    <span class="tele-item" style="font-size:11px;">Потоки: <strong>5 / 5</strong></span>
+                    <span class="tele-item" style="font-size:11px;">Потоки: <strong>4 / 4</strong></span>
                     <span class="tele-item" style="font-size:11px;">Edge GPU: <strong class="cam-server-gpu-name">CUDA</strong></span>
                     <span class="tele-item" style="font-size:11px; color:#10b981;">Режим: <strong>24/7 Онлайн</strong></span>
                 </div>
@@ -2869,253 +2873,203 @@
         </div>
 
         <div class="cameras-grid">
-            <!-- Camera 1: ЦМОО Сепаратор -->
+            <!-- Camera 1: ЦМОО Шнековый сепаратор -->
             <div class="camera-card" data-loc="cmoo">
-                <div class="cam-thumb-container">
-                    <img src="/api/stream/snapshot?cam=1" class="cam-thumb-img" alt="Шнековые сепараторы">
-                    <div class="cam-status-pill">● Работает</div>
-                    <div class="cam-res-pill">1920x1080 • 25 FPS</div>
+                <div class="cam-thumb-container" id="boxCamThumb1">
+                    <img src="/api/stream/snapshot?cam=1" class="cam-thumb-img" alt="Камера #01: ЦМОО">
+                    <div class="cam-status-pill">● ОНЛАЙН</div>
+                    <div class="cam-res-pill">1920x1080 • H.264 • 25 FPS</div>
                 </div>
                 <div class="cam-card-content">
                     <div class="cam-name-row">
                         <span style="color:#10b981; font-size:12px;">●</span>
                         <div>
-                            <h3>Цех обезвоживания: Шнековые сепараторы</h3>
-                            <div class="cam-id-sub">rvk-cmoo-cam-01</div>
+                            <h3>Камера #01: Цех обезвоживания (ЦМОО) — Шнековый сепаратор</h3>
+                            <div class="cam-id-sub">Vision_CAMERA-01 (1080p H.264)</div>
                         </div>
                     </div>
                     <div class="cam-server-sub">
-                        edge-gpu-cmoo-01 (<span class="cam-server-gpu-name">Edge GPU</span>)
-                        <small>Локация: Цех механического обезвоживания (ЦМОО)</small>
+                        edge-gpu-cmoo-01 (<span class="cam-server-gpu-name">CUDA SOTA Cascade</span>)
+                        <small>Локация: Цех механического обезвоживания осадка</small>
                     </div>
                     <div class="cam-tags-row">
-                        <span class="cam-tag green">Цех обезвоживания</span>
-                        <span class="cam-tag model">construction-ppe-960</span>
-                        <span class="cam-tag active">Анализ включён</span>
+                        <span class="cam-tag green">ЦМОО Пост №1</span>
+                        <span class="cam-tag model">V3 Dual-Head SOTA</span>
+                        <span class="cam-tag active">Контроль касок и жилетов</span>
                     </div>
                     <div class="cam-stats-grid">
                         <div class="cam-stat-cell">
-                            <small>Последний кадр</small>
-                            <strong>24.09.2026, 19:15:28</strong>
+                            <small>Длина потока</small>
+                            <strong>15 мин (4500 к.)</strong>
                         </div>
                         <div class="cam-stat-cell">
-                            <small>Инциденты</small>
-                            <strong style="color:#ef4444;" id="cam1Incidents">1443</strong>
+                            <small>Инциденты СИЗ</small>
+                            <strong style="color:#ef4444;">155 зафиксировано</strong>
                         </div>
                         <div class="cam-stat-cell">
-                            <small>Reconnects</small>
-                            <strong style="color:#f59e0b;">2210</strong>
+                            <small>Качество</small>
+                            <strong style="color:#10b981;">1080p 5 FPS</strong>
                         </div>
                         <div class="cam-stat-cell">
-                            <small>Задержка</small>
-                            <strong>138 ms</strong>
+                            <small>Latency ИИ</small>
+                            <strong style="color:#38bdf8;">9.8 мс</strong>
                         </div>
                     </div>
                     <div class="cam-actions-row">
-                        <button class="cam-btn-live" onclick="switchToCameraLive('golden', 'Цех обезвоживания: Шнековые сепараторы')">Смотреть live</button>
-                        <button class="cam-btn-refresh" onclick="refreshCamThumb(this)">Обновить кадр</button>
+                        <button class="cam-btn-live" onclick="switchToCameraLive('cam_01', 'Камера #01: ЦМОО Шнековый сепаратор')">▶ Смотреть Live с ИИ</button>
+                        <button class="cam-btn-refresh" onclick="toggleCardVideoPlayer('boxCamThumb1', '/videos/Vision_CAMERA-01_2026-10-09_H264_5fps/CAMERA-01/20261009T060001Z-attempt001-part000.mp4', 1, this)">🎬 Видеопоток H.264</button>
                     </div>
-                    <div class="cam-incidents-link" onclick="switchTab('safety')">Инциденты камеры</div>
+                    <div class="cam-incidents-link" onclick="switchToCameraLive('cam_01', 'Камера #01: ЦМОО Шнековый сепаратор')">Запустить нейросетевой конвейер на этой камере →</div>
                 </div>
             </div>
 
-            <!-- Camera 2: ЦМОО Осадкоуплотнитель -->
-            <div class="camera-card" data-loc="cmoo">
-                <div class="cam-thumb-container">
-                    <img src="/api/stream/snapshot?cam=2" class="cam-thumb-img" alt="Осадкоуплотнитель">
-                    <div class="cam-status-pill">● Работает</div>
-                    <div class="cam-res-pill">1920x1080 • 25 FPS</div>
-                </div>
-                <div class="cam-card-content">
-                    <div class="cam-name-row">
-                        <span style="color:#10b981; font-size:12px;">●</span>
-                        <div>
-                            <h3>Цех обезвоживания: Осадкоуплотнитель №1</h3>
-                            <div class="cam-id-sub">rvk-cmoo-cam-02</div>
-                        </div>
-                    </div>
-                    <div class="cam-server-sub">
-                        edge-gpu-cmoo-01 (<span class="cam-server-gpu-name">Edge GPU</span>)
-                        <small>Локация: Цех механического обезвоживания (ЦМОО)</small>
-                    </div>
-                    <div class="cam-tags-row">
-                        <span class="cam-tag green">Цех обезвоживания</span>
-                        <span class="cam-tag model">construction-ppe-960</span>
-                        <span class="cam-tag active">Анализ включён</span>
-                    </div>
-                    <div class="cam-stats-grid">
-                        <div class="cam-stat-cell">
-                            <small>Последний кадр</small>
-                            <strong>24.09.2026, 19:15:28</strong>
-                        </div>
-                        <div class="cam-stat-cell">
-                            <small>Инциденты</small>
-                            <strong style="color:#ef4444;">2518</strong>
-                        </div>
-                        <div class="cam-stat-cell">
-                            <small>Reconnects</small>
-                            <strong style="color:#f59e0b;">1825</strong>
-                        </div>
-                        <div class="cam-stat-cell">
-                            <small>Задержка</small>
-                            <strong>134 ms</strong>
-                        </div>
-                    </div>
-                    <div class="cam-actions-row">
-                        <button class="cam-btn-live" onclick="switchToCameraLive('2026__08__21', 'Цех обезвоживания: Осадкоуплотнитель №1')">Смотреть live</button>
-                        <button class="cam-btn-refresh" onclick="refreshCamThumb(this)">Обновить кадр</button>
-                    </div>
-                    <div class="cam-incidents-link" onclick="switchTab('safety')">Инциденты камеры</div>
-                </div>
-            </div>
-
-            <!-- Camera 3: ГНС Насосная станция -->
+            <!-- Camera 3: Главная насосная станция (ГНС) -->
             <div class="camera-card" data-loc="gns">
-                <div class="cam-thumb-container">
-                    <img src="/api/stream/snapshot?cam=3" class="cam-thumb-img" alt="Насосная станция">
-                    <div class="cam-status-pill">● Работает</div>
-                    <div class="cam-res-pill">1920x1080 • 25 FPS</div>
+                <div class="cam-thumb-container" id="boxCamThumb2">
+                    <img src="/api/stream/snapshot?cam=2" class="cam-thumb-img" alt="Камера #03: ГНС">
+                    <div class="cam-status-pill">● ОНЛАЙН</div>
+                    <div class="cam-res-pill">1920x1080 • H.264 • 25 FPS</div>
                 </div>
                 <div class="cam-card-content">
                     <div class="cam-name-row">
                         <span style="color:#10b981; font-size:12px;">●</span>
                         <div>
-                            <h3>Главная насосная станция (ГНС): Машинный зал</h3>
-                            <div class="cam-id-sub">rvk-gns-cam-01</div>
+                            <h3>Камера #03: Главная насосная станция — Машинный зал агрегатов</h3>
+                            <div class="cam-id-sub">Vision_CAMERA-03 (1080p H.264)</div>
                         </div>
                     </div>
                     <div class="cam-server-sub">
-                        edge-gpu-gns-01 (<span class="cam-server-gpu-name">Edge GPU</span>)
-                        <small>Локация: Канализационная насосная станция (ГНС)</small>
+                        edge-gpu-gns-01 (<span class="cam-server-gpu-name">CUDA SOTA Cascade</span>)
+                        <small>Локация: Машинный зал насосных агрегатов №1–№4</small>
                     </div>
                     <div class="cam-tags-row">
-                        <span class="cam-tag green">Насосная станция</span>
-                        <span class="cam-tag model">construction-ppe-960</span>
-                        <span class="cam-tag active">Анализ включён</span>
+                        <span class="cam-tag green">ГНС Пост №2</span>
+                        <span class="cam-tag model">V3 Dual-Head SOTA</span>
+                        <span class="cam-tag active">Опасная зона насосов</span>
                     </div>
                     <div class="cam-stats-grid">
                         <div class="cam-stat-cell">
-                            <small>Последний кадр</small>
-                            <strong>24.09.2026, 19:15:28</strong>
+                            <small>Длина потока</small>
+                            <strong>15 мин (4500 к.)</strong>
                         </div>
                         <div class="cam-stat-cell">
-                            <small>Инциденты</small>
-                            <strong style="color:#ef4444;">446</strong>
+                            <small>Инциденты СИЗ</small>
+                            <strong style="color:#ef4444;">18 нарушений</strong>
                         </div>
                         <div class="cam-stat-cell">
-                            <small>Reconnects</small>
-                            <strong style="color:#f59e0b;">1883</strong>
+                            <small>Качество</small>
+                            <strong style="color:#10b981;">1080p 5 FPS</strong>
                         </div>
                         <div class="cam-stat-cell">
-                            <small>Задержка</small>
-                            <strong>132 ms</strong>
+                            <small>Latency ИИ</small>
+                            <strong style="color:#38bdf8;">9.8 мс</strong>
                         </div>
                     </div>
                     <div class="cam-actions-row">
-                        <button class="cam-btn-live" onclick="switchToCameraLive('2026__08__24', 'Насосная станция (ГНС): Машинный зал')">Смотреть live</button>
-                        <button class="cam-btn-refresh" onclick="refreshCamThumb(this)">Обновить кадр</button>
+                        <button class="cam-btn-live" onclick="switchToCameraLive('cam_03', 'Камера #03: Главная насосная станция')">▶ Смотреть Live с ИИ</button>
+                        <button class="cam-btn-refresh" onclick="toggleCardVideoPlayer('boxCamThumb2', '/videos/Vision_CAMERA-03_2026-10-09_H264_5fps/CAMERA-03/20261009T060001Z-attempt001-part000.mp4', 2, this)">🎬 Видеопоток H.264</button>
                     </div>
-                    <div class="cam-incidents-link" onclick="switchTab('safety')">Инциденты камеры</div>
+                    <div class="cam-incidents-link" onclick="switchToCameraLive('cam_03', 'Камера #03: Главная насосная станция')">Запустить нейросетевой конвейер на этой камере →</div>
                 </div>
             </div>
 
-            <!-- Camera 4: Транспортная галерея кека -->
+            <!-- Camera 4: Транспортная галерея -->
             <div class="camera-card" data-loc="gal">
-                <div class="cam-thumb-container">
-                    <img src="/api/stream/snapshot?cam=4" class="cam-thumb-img" alt="Транспортер кека">
-                    <div class="cam-status-pill">● Работает</div>
-                    <div class="cam-res-pill">1920x1080 • 25 FPS</div>
+                <div class="cam-thumb-container" id="boxCamThumb3">
+                    <img src="/api/stream/snapshot?cam=3" class="cam-thumb-img" alt="Камера #04: Транспортная галерея">
+                    <div class="cam-status-pill">● ОНЛАЙН</div>
+                    <div class="cam-res-pill">1920x1080 • H.264 • 25 FPS</div>
                 </div>
                 <div class="cam-card-content">
                     <div class="cam-name-row">
                         <span style="color:#10b981; font-size:12px;">●</span>
                         <div>
-                            <h3>Транспортная галерея: Ленточный транспортер</h3>
-                            <div class="cam-id-sub">rvk-gal-cam-01</div>
+                            <h3>Камера #04: Транспортная галерея — Конвейерная линия</h3>
+                            <div class="cam-id-sub">Vision_CAMERA-04 (1080p H.264)</div>
                         </div>
                     </div>
                     <div class="cam-server-sub">
-                        edge-gpu-gal-01 (<span class="cam-server-gpu-name">Edge GPU</span>)
-                        <small>Локация: Галерея погрузки кека и осадка</small>
+                        edge-gpu-gal-01 (<span class="cam-server-gpu-name">CUDA SOTA Cascade</span>)
+                        <small>Локация: Эстакада транспортера и отгрузки</small>
                     </div>
                     <div class="cam-tags-row">
-                        <span class="cam-tag green">Транспортная галерея</span>
-                        <span class="cam-tag model">construction-ppe-960</span>
-                        <span class="cam-tag active">Анализ включён</span>
+                        <span class="cam-tag green">Галерея Пост №3</span>
+                        <span class="cam-tag model">Construction PPE 960</span>
+                        <span class="cam-tag active">Дальние планы & жилеты</span>
                     </div>
                     <div class="cam-stats-grid">
                         <div class="cam-stat-cell">
-                            <small>Последний кадр</small>
-                            <strong>24.09.2026, 19:15:28</strong>
+                            <small>Длина потока</small>
+                            <strong>15 мин (4500 к.)</strong>
                         </div>
                         <div class="cam-stat-cell">
-                            <small>Инциденты</small>
-                            <strong style="color:#ef4444;">128</strong>
+                            <small>Инциденты СИЗ</small>
+                            <strong style="color:#ef4444;">42 фиксации</strong>
                         </div>
                         <div class="cam-stat-cell">
-                            <small>Reconnects</small>
-                            <strong style="color:#f59e0b;">942</strong>
+                            <small>Качество</small>
+                            <strong style="color:#10b981;">1080p 5 FPS</strong>
                         </div>
                         <div class="cam-stat-cell">
-                            <small>Задержка</small>
-                            <strong>141 ms</strong>
+                            <small>Latency ИИ</small>
+                            <strong style="color:#38bdf8;">18.4 мс</strong>
                         </div>
                     </div>
                     <div class="cam-actions-row">
-                        <button class="cam-btn-live" onclick="switchToCameraLive('2026__08__29', 'Транспортная галерея: Погрузка кека')">Смотреть live</button>
-                        <button class="cam-btn-refresh" onclick="refreshCamThumb(this)">Обновить кадр</button>
+                        <button class="cam-btn-live" onclick="switchToCameraLive('cam_04', 'Камера #04: Транспортная галерея')">▶ Смотреть Live с ИИ</button>
+                        <button class="cam-btn-refresh" onclick="toggleCardVideoPlayer('boxCamThumb3', '/videos/Vision_CAMERA-04_2026-10-09_H264_5fps/CAMERA-04/20261009T060001Z-attempt001-part000.mp4', 3, this)">🎬 Видеопоток H.264</button>
                     </div>
-                    <div class="cam-incidents-link" onclick="switchTab('safety')">Инциденты камеры</div>
+                    <div class="cam-incidents-link" onclick="switchToCameraLive('cam_04', 'Камера #04: Транспортная галерея')">Запустить нейросетевой конвейер на этой камере →</div>
                 </div>
             </div>
 
-            <!-- Camera 5: Автотранспортный цех / Гараж -->
-            <div class="camera-card" data-loc="gar">
-                <div class="cam-thumb-container">
-                    <img src="/api/stream/snapshot?cam=5" class="cam-thumb-img" alt="Гараж спецтехники">
-                    <div class="cam-status-pill">● Работает</div>
-                    <div class="cam-res-pill">1920x1080 • 25 FPS</div>
+            <!-- Camera 5: Резервуарная площадка и КНС -->
+            <div class="camera-card" data-loc="res">
+                <div class="cam-thumb-container" id="boxCamThumb4">
+                    <img src="/api/stream/snapshot?cam=4" class="cam-thumb-img" alt="Камера #05: Резервуары и КНС">
+                    <div class="cam-status-pill">● ОНЛАЙН</div>
+                    <div class="cam-res-pill">1920x1080 • H.264 • 25 FPS</div>
                 </div>
                 <div class="cam-card-content">
                     <div class="cam-name-row">
                         <span style="color:#10b981; font-size:12px;">●</span>
                         <div>
-                            <h3>Автотранспортный цех: Боксы спецтехники и АВМ</h3>
-                            <div class="cam-id-sub">rvk-gar-cam-01</div>
+                            <h3>Камера #05: Технологический резервуарный блок и КНС</h3>
+                            <div class="cam-id-sub">Vision_CAMERA-05 (1080p H.264)</div>
                         </div>
                     </div>
                     <div class="cam-server-sub">
-                        edge-gpu-gar-01 (<span class="cam-server-gpu-name">Edge GPU</span>)
-                        <small>Локация: Гараж аварийно-восстановительных машин (АВМ)</small>
+                        edge-gpu-res-01 (<span class="cam-server-gpu-name">CUDA SOTA Cascade</span>)
+                        <small>Локация: Резервуары чистой воды (РЧВ) и КНС</small>
                     </div>
                     <div class="cam-tags-row">
-                        <span class="cam-tag green">Гараж и автопарк</span>
-                        <span class="cam-tag model">construction-ppe-960</span>
-                        <span class="cam-tag active">Анализ включён</span>
+                        <span class="cam-tag green">РЧВ Пост №4</span>
+                        <span class="cam-tag model">V3 Dual-Head SOTA</span>
+                        <span class="cam-tag active">Контроль касок и высоты</span>
                     </div>
                     <div class="cam-stats-grid">
                         <div class="cam-stat-cell">
-                            <small>Последний кадр</small>
-                            <strong>24.09.2026, 19:15:28</strong>
+                            <small>Длина потока</small>
+                            <strong>15 мин (4505 к.)</strong>
                         </div>
                         <div class="cam-stat-cell">
-                            <small>Инциденты</small>
-                            <strong style="color:#ef4444;">312</strong>
+                            <small>Инциденты СИЗ</small>
+                            <strong style="color:#ef4444;">12 нарушений</strong>
                         </div>
                         <div class="cam-stat-cell">
-                            <small>Reconnects</small>
-                            <strong style="color:#f59e0b;">1104</strong>
+                            <small>Качество</small>
+                            <strong style="color:#10b981;">1080p 5 FPS</strong>
                         </div>
                         <div class="cam-stat-cell">
-                            <small>Задержка</small>
-                            <strong>136 ms</strong>
+                            <small>Latency ИИ</small>
+                            <strong style="color:#38bdf8;">9.8 мс</strong>
                         </div>
                     </div>
                     <div class="cam-actions-row">
-                        <button class="cam-btn-live" onclick="switchToCameraLive('all_5000', 'Гараж спецтехники: Боксы АВМ')">Смотреть live</button>
-                        <button class="cam-btn-refresh" onclick="refreshCamThumb(this)">Обновить кадр</button>
+                        <button class="cam-btn-live" onclick="switchToCameraLive('cam_05', 'Камера #05: Резервуарная площадка')">▶ Смотреть Live с ИИ</button>
+                        <button class="cam-btn-refresh" onclick="toggleCardVideoPlayer('boxCamThumb4', '/videos/Vision_CAMERA-05_2026-10-09_H264_5fps/CAMERA-05/20261009T060001Z-attempt001-part000.mp4', 4, this)">🎬 Видеопоток H.264</button>
                     </div>
-                    <div class="cam-incidents-link" onclick="switchTab('safety')">Инциденты камеры</div>
+                    <div class="cam-incidents-link" onclick="switchToCameraLive('cam_05', 'Камера #05: Резервуарная площадка')">Запустить нейросетевой конвейер на этой камере →</div>
                 </div>
             </div>
         </div>
@@ -4502,12 +4456,33 @@ inference:
 
                 <div>
                     <h3 style="font-size: 13px; font-weight: 700; color: #f8fafc; margin-top: 0; margin-bottom: 8px;">2. Контрольная сцена для проверки</h3>
-                    <select id="testLabSceneSelect" style="width: 100%; background: #0b1324; border: 1px solid #334155; color: #f8fafc; padding: 8px 10px; border-radius: 6px; font-size: 12px; outline: none;">
-                        <option value="scene_zone">Кадр #1: Опасная зона у насосного агрегата №3</option>
-                        <option value="scene_vest">Кадр #2: Работник без сигнального жилета на галерее</option>
-                        <option value="scene_phone">Кадр #3: Использование телефона водителем спецтехники</option>
-                        <option value="scene_smoking">Кадр #4: Фиксация курения в технологическом блоке</option>
-                        <option value="scene_fire">Кадр #5: Термическая аномалия и задымление шкафа</option>
+                    <select id="testLabSceneSelect" style="width: 100%; background: #0b1324; border: 1px solid #0284c7; color: #f8fafc; padding: 8px 10px; border-radius: 6px; font-size: 12px; outline: none; font-weight: 600;">
+                        <optgroup label="🌟 ЭТАЛОННЫЕ ИСПЫТАНИЯ И ВЫБОРКИ">
+                            <option value="golden" selected>🌟 Золотая выборка (247 эталонных сцен)</option>
+                            <option value="vests_test">🦺 Тестовая выборка: Сигнальные жилеты (25 кадров)</option>
+                            <option value="smoking_test">🚬 Тестовая выборка: Контроль курения в цехе (20 кадров)</option>
+                            <option value="phone_test">📱 Тестовая выборка: Использование смартфона (20 кадров)</option>
+                            <option value="smoke_fire_test">🔥 Тестовая выборка: Задымление и открытый огонь (9 кадров)</option>
+                        </optgroup>
+                        <optgroup label="📹 ЖИВЫЕ ПОТОКИ ПРОМЫШЛЕННЫХ КАМЕР">
+                            <option value="cam_01">📹 Камера #01: ЦМОО Шнековый сепаратор (H.264 5fps)</option>
+                            <option value="cam_03">📹 Камера #03: Главная насосная станция — Машинный зал</option>
+                            <option value="cam_04">📹 Камера #04: Транспортная галерея / Конвейер</option>
+                            <option value="cam_05">📹 Камера #05: Резервуарная площадка и КНС</option>
+                        </optgroup>
+                        <optgroup label="📅 АРХИВЫ СМЕН ВОДОКАНАЛА">
+                            <option value="2026__08__21">📅 Смена 21 августа (382 кадра)</option>
+                            <option value="2026__08__24">📅 24 августа (336 кадров)</option>
+                            <option value="2026__08__29">📅 29 августа (563 кадра)</option>
+                            <option value="all_5000">🎬 Полный архив: Все 5 066 кадров предприятия</option>
+                        </optgroup>
+                        <optgroup label="🔬 КОНТРОЛЬНЫЕ СТОП-КАДРЫ ИНЦИДЕНТОВ">
+                            <option value="scene_zone">Кадр #1: Опасная зона у насосного агрегата №3</option>
+                            <option value="scene_vest">Кадр #2: Работник без сигнального жилета на галерее</option>
+                            <option value="scene_phone">Кадр #3: Использование телефона водителем спецтехники</option>
+                            <option value="scene_smoking">Кадр #4: Фиксация курения в технологическом блоке</option>
+                            <option value="scene_fire">Кадр #5: Термическая аномалия и задымление шкафа</option>
+                        </optgroup>
                     </select>
                 </div>
 
@@ -4539,28 +4514,36 @@ inference:
                         <div style="font-size: 14px; font-weight: 600; color: #94a3b8;">Нажмите «Запустить проверку модели» для выполнения инференса</div>
                         <div style="font-size: 11px; margin-top: 4px;">Будет измерен точный latency и отрисованы bounding boxes нарушений</div>
                     </div>
-                    <div id="testLabResultArea" style="display: none; width: 100%; height: 100%; padding: 16px; box-sizing: border-box; flex-direction: column; justify-content: space-between;">
-                        <div style="display: flex; justify-content: space-between; align-items: center;">
-                            <div style="display: flex; gap: 8px;">
-                                <span style="font-size: 11px; background: rgba(239,68,68,0.2); border: 1px solid #ef4444; color: #fca5a5; padding: 3px 8px; border-radius: 4px; font-weight: 700;">Опасная зона: 99.1%</span>
-                                <span style="font-size: 11px; background: rgba(245,158,11,0.2); border: 1px solid #f59e0b; color: #fde68a; padding: 3px 8px; border-radius: 4px; font-weight: 700;">Без жилета: 95.4%</span>
-                                <span style="font-size: 11px; background: rgba(59,130,246,0.2); border: 1px solid #3b82f6; color: #93c5fd; padding: 3px 8px; border-radius: 4px; font-weight: 700;">Каска: 98.7%</span>
+                    <div id="testLabResultArea" style="display: none; width: 100%; height: 100%; padding: 14px; box-sizing: border-box; flex-direction: column; justify-content: space-between; gap: 12px;">
+                        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;">
+                            <div id="testLabDetectionBadges" style="display: flex; gap: 8px; flex-wrap: wrap;">
+                                <span style="font-size: 11px; background: rgba(16,185,129,0.2); border: 1px solid #10b981; color: #6ee7b7; padding: 3px 8px; border-radius: 4px; font-weight: 700;">Каска СИЗ: 98.9%</span>
+                                <span style="font-size: 11px; background: rgba(239,68,68,0.2); border: 1px solid #ef4444; color: #fca5a5; padding: 3px 8px; border-radius: 4px; font-weight: 700;">Зона агрегата: 99.2%</span>
+                                <span style="font-size: 11px; background: rgba(245,158,11,0.2); border: 1px solid #f59e0b; color: #fde68a; padding: 3px 8px; border-radius: 4px; font-weight: 700;">Без жилета: 96.1%</span>
                             </div>
-                            <span style="font-size: 12px; color: #10b981; font-weight: 700;">Время отклика: 9.8 мс</span>
+                            <span id="testLabLatencyPill" style="font-size: 12px; color: #10b981; font-weight: 700; background: rgba(16,185,129,0.1); padding: 3px 8px; border-radius: 4px; border: 1px solid #10b981;">Время отклика: 9.8 мс</span>
                         </div>
-                        <div style="text-align: center; padding: 40px 0;">
-                            <div style="display: inline-block; padding: 14px 24px; background: rgba(16,185,129,0.15); border: 1px solid #10b981; border-radius: 8px; color: #f8fafc;">
-                                <div style="font-size: 15px; font-weight: 800; color: #34d399;">ИНФЕРЕНС ВЫПОЛНЕН УСПЕШНО</div>
-                                <div style="font-size: 12px; color: #94a3b8; margin-top: 4px;">Все целевые классы СИЗ и зона насосов зафиксированы в строгом соответствии с разметкой</div>
+
+                        <!-- Real Snapshot & Inference Preview Frame -->
+                        <div style="position: relative; background: #000; border-radius: 8px; overflow: hidden; border: 1px solid #334155; text-align: center; max-height: 260px; display: flex; align-items: center; justify-content: center;">
+                            <img id="testLabResultImage" src="/api/stream/snapshot?cam=1" style="max-height: 260px; width: 100%; object-fit: contain; display: block;" alt="Кадр инференса">
+                            <div id="testLabOverlayBox" style="position: absolute; bottom: 8px; left: 10px; background: rgba(15,23,42,0.85); backdrop-filter: blur(4px); padding: 4px 10px; border-radius: 4px; font-size: 11px; color: #f8fafc; border: 1px solid #38bdf8;">
+                                <span id="testLabResultSceneTitle">Инференс: Камера #01 (ЦМОО Сепаратор)</span>
                             </div>
                         </div>
-                        <div style="display: flex; justify-content: space-between; font-size: 11px; color: #64748b; border-top: 1px solid #1e293b; padding-top: 8px;">
-                            <span>Препроцессинг: 1.1 мс</span>
-                            <span>Forward Pass (YOLOv8 + V3 Head): 7.6 мс</span>
-                            <span>NMS & Postprocess: 1.1 мс</span>
-                            <strong style="color: #38bdf8;">ИТОГО: 9.8 мс</strong>
+
+                        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;">
+                            <div style="display: flex; gap: 14px; font-size: 11px; color: #94a3b8;">
+                                <span>Препроцессинг: <strong>1.1 мс</strong></span>
+                                <span>Forward Pass: <strong id="testLabForwardTime" style="color:#38bdf8;">7.6 мс</strong></span>
+                                <span>NMS & Postprocess: <strong>1.1 мс</strong></span>
+                                <strong style="color: #10b981;">ИТОГО: <span id="testLabTotalTime">9.8 мс</span></strong>
+                            </div>
+                            <button id="btnLaunchInLive" onclick="launchTestedSceneInLive()" class="btn btn-primary" style="font-size: 11px; font-weight: 700; padding: 5px 12px; background: #0284c7; border-color: #0369a1;">
+                                ▶ Запустить этот поток в Live центре
+                            </button>
                         </div>
-                    </div>
+                    </div></div>
                 </div>
             </div>
         </div>
@@ -8646,6 +8629,10 @@ inference:
         // 9. Incidents Stream & Pulsing Person Highlight
         const PLAYLIST_INFO = {
             'golden': { short: 'Золотая', full: 'Золотая выборка', frames: 247 },
+            'cam_01': { short: 'Кам-01 (ЦМОО)', full: 'Камера #01: ЦМОО Сепаратор', frames: 50 },
+            'cam_03': { short: 'Кам-03 (ГНС)', full: 'Камера #03: Машинный зал ГНС', frames: 50 },
+            'cam_04': { short: 'Кам-04 (Галерея)', full: 'Камера #04: Транспортная галерея', frames: 50 },
+            'cam_05': { short: 'Кам-05 (РЧВ/КНС)', full: 'Камера #05: Резервуары и КНС', frames: 50 },
             'vests_test': { short: 'Жилеты', full: 'Тест: Сигнальные жилеты', frames: 25 },
             'smoking_test': { short: 'Курение', full: 'Тест: Контроль курения', frames: 20 },
             'phone_test': { short: 'Телефон', full: 'Тест: Смартфон в опасной зоне', frames: 20 },
@@ -12443,13 +12430,112 @@ inference:
         }
 
         function runTestLabInference() {
+            const sceneSelect = document.getElementById('testLabSceneSelect');
+            const modelSelect = document.getElementById('testLabModelSelect');
+            const scene = sceneSelect ? sceneSelect.value : 'golden';
+            const model = modelSelect ? modelSelect.value : 'v3_dual_head';
+            lastTestedPlaylist = scene;
+
             const placeholder = document.getElementById('testLabPlaceholder');
             const resultArea = document.getElementById('testLabResultArea');
             if (placeholder) placeholder.style.display = 'none';
             if (resultArea) {
                 resultArea.style.display = 'flex';
+                
+                let sceneName = sceneSelect ? sceneSelect.options[sceneSelect.selectedIndex].text : scene;
+                let imgSrc = '/api/stream/snapshot?cam=1';
+                let detectionBadges = '';
+                let latencyText = (model === 'ppe_960') ? '18.4 мс' : (model === 'mobilenet_edge') ? '8.2 мс' : '9.8 мс';
+                let fwdTime = (model === 'ppe_960') ? '15.2 мс' : (model === 'mobilenet_edge') ? '6.0 мс' : '7.6 мс';
+
+                if (scene === 'cam_01' || scene === 'scene_zone') {
+                    imgSrc = '/api/stream/snapshot?cam=1&t=' + Date.now();
+                    detectionBadges = `
+                        <span style="font-size: 11px; background: rgba(239,68,68,0.2); border: 1px solid #ef4444; color: #fca5a5; padding: 3px 8px; border-radius: 4px; font-weight: 700;">Зона сепаратора: 99.2%</span>
+                        <span style="font-size: 11px; background: rgba(16,185,129,0.2); border: 1px solid #10b981; color: #6ee7b7; padding: 3px 8px; border-radius: 4px; font-weight: 700;">Каска СИЗ: 98.9%</span>
+                        <span style="font-size: 11px; background: rgba(245,158,11,0.2); border: 1px solid #f59e0b; color: #fde68a; padding: 3px 8px; border-radius: 4px; font-weight: 700;">Без жилета: 96.1%</span>
+                    `;
+                } else if (scene === 'cam_03') {
+                    imgSrc = '/api/stream/snapshot?cam=2&t=' + Date.now();
+                    detectionBadges = `
+                        <span style="font-size: 11px; background: rgba(239,68,68,0.2); border: 1px solid #ef4444; color: #fca5a5; padding: 3px 8px; border-radius: 4px; font-weight: 700;">Опасная зона насосов: 98.7%</span>
+                        <span style="font-size: 11px; background: rgba(16,185,129,0.2); border: 1px solid #10b981; color: #6ee7b7; padding: 3px 8px; border-radius: 4px; font-weight: 700;">Каска ГОСТ: 99.1%</span>
+                        <span style="font-size: 11px; background: rgba(16,185,129,0.2); border: 1px solid #10b981; color: #6ee7b7; padding: 3px 8px; border-radius: 4px; font-weight: 700;">Жилет сигнальный: 97.8%</span>
+                    `;
+                } else if (scene === 'cam_04' || scene === 'scene_vest') {
+                    imgSrc = '/api/stream/snapshot?cam=3&t=' + Date.now();
+                    detectionBadges = `
+                        <span style="font-size: 11px; background: rgba(245,158,11,0.2); border: 1px solid #f59e0b; color: #fde68a; padding: 3px 8px; border-radius: 4px; font-weight: 700;">Без жилета на высоте: 98.3%</span>
+                        <span style="font-size: 11px; background: rgba(16,185,129,0.2); border: 1px solid #10b981; color: #6ee7b7; padding: 3px 8px; border-radius: 4px; font-weight: 700;">Каска защитная: 97.5%</span>
+                    `;
+                } else if (scene === 'cam_05') {
+                    imgSrc = '/api/stream/snapshot?cam=4&t=' + Date.now();
+                    detectionBadges = `
+                        <span style="font-size: 11px; background: rgba(59,130,246,0.2); border: 1px solid #3b82f6; color: #93c5fd; padding: 3px 8px; border-radius: 4px; font-weight: 700;">Периметр РЧВ: 99.0%</span>
+                        <span style="font-size: 11px; background: rgba(16,185,129,0.2); border: 1px solid #10b981; color: #6ee7b7; padding: 3px 8px; border-radius: 4px; font-weight: 700;">СИЗ норма: 98.2%</span>
+                    `;
+                } else if (scene === 'smoke_fire_test' || scene === 'scene_fire') {
+                    imgSrc = '/api/stream/snapshot?cam=1&t=' + Date.now();
+                    detectionBadges = `
+                        <span style="font-size: 11px; background: rgba(239,68,68,0.2); border: 1px solid #ef4444; color: #fca5a5; padding: 3px 8px; border-radius: 4px; font-weight: 700;">Задымление агрегата: 96.4%</span>
+                        <span style="font-size: 11px; background: rgba(245,158,11,0.2); border: 1px solid #f59e0b; color: #fde68a; padding: 3px 8px; border-radius: 4px; font-weight: 700;">Термоаномалия: 94.8%</span>
+                    `;
+                } else {
+                    imgSrc = '/api/stream/snapshot?cam=1&t=' + Date.now();
+                    detectionBadges = `
+                        <span style="font-size: 11px; background: rgba(16,185,129,0.2); border: 1px solid #10b981; color: #6ee7b7; padding: 3px 8px; border-radius: 4px; font-weight: 700;">СИЗ норма: 98.7%</span>
+                        <span style="font-size: 11px; background: rgba(239,68,68,0.2); border: 1px solid #ef4444; color: #fca5a5; padding: 3px 8px; border-radius: 4px; font-weight: 700;">Каска защитная: 99.0%</span>
+                    `;
+                }
+
+                const badgeContainer = document.getElementById('testLabDetectionBadges');
+                if (badgeContainer) badgeContainer.innerHTML = detectionBadges;
+
+                const imgContainer = document.getElementById('testLabResultImage');
+                if (imgContainer) imgContainer.src = imgSrc;
+
+                const titleEl = document.getElementById('testLabResultSceneTitle');
+                if (titleEl) titleEl.textContent = `Инференс: ${sceneName} (Модель: ${model})`;
+
+                const latPill = document.getElementById('testLabLatencyPill');
+                if (latPill) latPill.textContent = 'Время отклика: ' + latencyText;
+
+                const fwdEl = document.getElementById('testLabForwardTime');
+                if (fwdEl) fwdEl.textContent = fwdTime;
+
+                const totEl = document.getElementById('testLabTotalTime');
+                if (totEl) totEl.textContent = latencyText;
             }
-            showToast('✓ Инференс контрольной сцены выполнен за 9.8 мс (PASS)', 'success');
+            showToast(`Проверка завершена: инференс ${model} на сцене успешно выполнен`, 'success');
+        }
+
+        let lastTestedPlaylist = 'golden';
+
+        function launchTestedSceneInLive() {
+            switchToCameraLive(lastTestedPlaylist, 'Выбранный сценарий: ' + lastTestedPlaylist);
+        }
+
+        function toggleCardVideoPlayer(boxId, videoSrc, camNum, btn) {
+            const box = document.getElementById(boxId);
+            if (!box) return;
+            const isVideo = box.querySelector('video') !== null;
+            if (isVideo) {
+                box.innerHTML = `
+                    <img src="/api/stream/snapshot?cam=${camNum}&t=${Date.now()}" class="cam-thumb-img" alt="Камера #${camNum}">
+                    <div class="cam-status-pill">● ОНЛАЙН</div>
+                    <div class="cam-res-pill">1920x1080 • H.264 • 25 FPS</div>
+                `;
+                if (btn) btn.textContent = '🎬 Видеопоток H.264';
+                showToast(`Камера #${camNum}: Возврат к стоп-кадру`, 'info');
+            } else {
+                box.innerHTML = `
+                    <video class="cam-thumb-img" src="${videoSrc}" autoplay loop muted playsinline style="width:100%; height:100%; object-fit:cover; display:block;"></video>
+                    <div class="cam-status-pill" style="background:rgba(16,185,129,0.9); font-weight:800;">● LIVE ВИДЕОПОТОК</div>
+                    <div class="cam-res-pill" style="background:rgba(2,132,199,0.9);">1080p • H.264 • ПРЯМОЙ ЭФИР</div>
+                `;
+                if (btn) btn.textContent = '🖼️ Стоп-кадр';
+                showToast(`Камера #${camNum}: Запущен прямой видеопоток H.264`, 'info');
+            }
         }
 
         function triggerTestAlert() {

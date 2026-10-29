@@ -168,6 +168,13 @@ class LiveStreamer:
         if phone_frames:
             self.playlists["phone_test"] = sorted(phone_frames)
 
+        # 8. Real Industrial Cameras Streams (4 new cameras from videos folder)
+        for cam_key in ["cam_01", "cam_03", "cam_04", "cam_05"]:
+            cam_dir = os.path.join(BASE_DIR, "dataset", "camera_frames", cam_key)
+            cam_frames = sorted(glob.glob(os.path.join(cam_dir, "*.jpg")))
+            if cam_frames:
+                self.playlists[cam_key] = cam_frames
+
         self.frame_paths = self.playlists.get(self.current_playlist, self.playlists["golden"])
         print(f"Playlists loaded: Golden({len(self.playlists.get('golden', []))}), "
               f"Vests({len(self.playlists.get('vests_test', []))}), "

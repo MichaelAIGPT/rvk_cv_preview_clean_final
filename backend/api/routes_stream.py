@@ -157,27 +157,61 @@ def clear_manual_overrides():
 
 @router.get("/video_sources")
 def get_video_sources():
-    """Returns available test video streams and files for live player and camera inspection."""
+    """Returns available test video streams and industrial cameras for player and analysis."""
     sources = [
         {
-            "id": "stream_annotated",
-            "title": "Камера #1 (ЦМОО): Живой поток с детекцией СИЗ (SOTA Cascade)",
+            "id": "cam_01",
+            "title": "Камера #01: ЦМОО Шнековый сепаратор (1080p H.264 5fps)",
             "cam_id": "CAM-01-CMOO",
+            "location": "Цех механического обезвоживания осадка (ЦМОО)",
+            "type": "camera_stream",
+            "url": "/videos/Vision_CAMERA-01_2026-10-09_H264_5fps/CAMERA-01/20261009T060001Z-attempt001-part000.mp4",
+            "fps": 5,
+            "badge": "КАМЕРА ОНЛАЙН",
+            "playlist": "cam_01"
+        },
+        {
+            "id": "cam_03",
+            "title": "Камера #03: Главная насосная станция — Машинный зал (1080p H.264 5fps)",
+            "cam_id": "CAM-03-PUMP",
+            "location": "Главная насосная станция (ГНС)",
+            "type": "camera_stream",
+            "url": "/videos/Vision_CAMERA-03_2026-10-09_H264_5fps/CAMERA-03/20261009T060001Z-attempt001-part000.mp4",
+            "fps": 5,
+            "badge": "КАМЕРА ОНЛАЙН",
+            "playlist": "cam_03"
+        },
+        {
+            "id": "cam_04",
+            "title": "Камера #04: Транспортная галерея — Конвейер (1080p H.264 5fps)",
+            "cam_id": "CAM-04-TRANS",
+            "location": "Транспортная эстакада и конвейер",
+            "type": "camera_stream",
+            "url": "/videos/Vision_CAMERA-04_2026-10-09_H264_5fps/CAMERA-04/20261009T060001Z-attempt001-part000.mp4",
+            "fps": 5,
+            "badge": "КАМЕРА ОНЛАЙН",
+            "playlist": "cam_04"
+        },
+        {
+            "id": "cam_05",
+            "title": "Камера #05: Технологический резервуарный блок и КНС (1080p H.264 5fps)",
+            "cam_id": "CAM-05-RES",
+            "location": "Резервуары чистой воды (РЧВ) и КНС",
+            "type": "camera_stream",
+            "url": "/videos/Vision_CAMERA-05_2026-10-09_H264_5fps/CAMERA-05/20261009T060001Z-attempt001-part000.mp4",
+            "fps": 5,
+            "badge": "КАМЕРА ОНЛАЙН",
+            "playlist": "cam_05"
+        },
+        {
+            "id": "stream_annotated",
+            "title": "Камера #01 (ЦМОО): Живой AI-размеченный SOTA поток",
+            "cam_id": "CAM-01-ANNOTATED",
             "location": "Цех механического обезвоживания (ЦМОО)",
             "type": "annotated",
             "url": "/previews/annotated_stream_h264.mp4",
             "fps": 25,
-            "badge": "AI АННОТИРОВАН"
-        },
-        {
-            "id": "stream_raw",
-            "title": "Камера #1 (ЦМОО): Чистый RTSP-поток без разметки (Raw 1080p)",
-            "cam_id": "CAM-01-CMOO",
-            "location": "Цех механического обезвоживания (ЦМОО)",
-            "type": "raw",
-            "url": "/previews/raw_stream_h264.mp4",
-            "fps": 25,
-            "badge": "RAW RTSP"
+            "badge": "AI ДЕТЕКЦИЯ"
         },
         {
             "id": "stream_showcase",
@@ -190,22 +224,4 @@ def get_video_sources():
             "badge": "SHOWCASE"
         }
     ]
-
-    # Also scan user videos folder
-    base_proj = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-    videos_dir = os.path.join(base_proj, "videos")
-    if os.path.exists(videos_dir):
-        for fname in sorted(os.listdir(videos_dir)):
-            if fname.lower().endswith((".mp4", ".avi", ".mkv", ".ts")):
-                sources.append({
-                    "id": f"user_video_{fname}",
-                    "title": f"Пользовательский поток: {fname}",
-                    "cam_id": "CUSTOM-STREAM",
-                    "location": "Папка /videos/",
-                    "type": "custom",
-                    "url": f"/videos/{fname}",
-                    "fps": 25,
-                    "badge": "НОВЫЙ ПОТОК"
-                })
     return {"sources": sources, "total": len(sources)}
-
